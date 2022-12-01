@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('owl.carousel/dist/assets/owl.carousel.css');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html, body{
+        font-family: 'Roboto', sans-serif;
+    }
+
+    @font-face {
+        font-family: 'gorditamedium';
+        src: url('../fonts/Gordita-Medium.eot');
+        src: url('../fonts/Gordita-Medium.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Gordita-Medium.woff2') format('woff2'),
+            url('../fonts/Gordita-Medium.woff') format('woff'),
+            url('../fonts/Gordita-Medium.ttf') format('truetype'),
+            url('../fonts/Gordita-Medium.svg#Gordita-Medium') format('svg');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'gorditabold';
+        src: url('../fonts/Gordita-Bold.eot');
+        src: url('../fonts/Gordita-Bold.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Gordita-Bold.woff2') format('woff2'),
+            url('../fonts/Gordita-Bold.woff') format('woff'),
+            url('../fonts/Gordita-Bold.ttf') format('truetype'),
+            url('../fonts/Gordita-Bold.svg#Gordita-Bold') format('svg');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    
+    
+  }
+
+@layer components{
+    .sprite{
+        background-image:url(../images/sprite.png);
+        background-repeat:no-repeat;
+        
+    }
+    .icon-search{
+        width:23px;
+        height:22px;
+        display: block;
+        background-position:-7px -8px;
+    }
+    .icon-bar{
+        width: 26px;
+        height:17px;
+        display: block;
+        background-position:-40px -8px;
+    }
+    .icon-fb{
+        background-position: -80px -3px;
+    }
+    .icon-fb:hover{
+        background-position: -80px -38px;
+    }
+    .icon-twitter{
+        background-position:-124px -3px;
+    }
+    .icon-twitter:hover{
+        background-position:-124px -39px;
+    }
+    .icon-youtube{
+        background-position:-170px -3px;
+    }
+    .icon-youtube:hover{
+        background-position:-170px -39px;
+    }
+    .icon-instagram{
+        background-position:-234px -3px;
+    }
+    .icon-instagram:hover{
+        background-position:-235px -39px;
+    }
+    .icon-drp-arrow{
+        width:12px;
+        height:7px;
+        display: inline-block;
+        background-position: -213px -4px;
+    }
+    .icon-play{
+        width:100px;
+        height:100px;
+        display: block;
+        background-position:-18px -81px;
+    }
+    .icon-headphone{
+        width:32px;
+        height:28px;
+        display:block;
+        background-position:-305px -288px;
+    }
+    .icon-msg{
+        width:24px;
+        height:22px;
+        display:block;
+        background-position:-344px -289px;
+    }
+    .ico-twt{
+        width:19px;
+        height:16px;
+        background-position: -339px -5px;
+    }
+    .ico-fb{
+        width:9px;
+        height:18px;
+        background-position:-385px -5px;
+    }
+    .ico-insta{
+        width:18px;
+        height:18px;
+        background-position:-420px -4px;
+    }
+    .ico-utube{
+        width:20px;
+        height:14px;
+        background-position:-460px -5px;
+    }
+    .qa-icon-1{
+        background-position:-160px -77px;
+    }
+    .qa-icon-2{
+        background-position:-219px -76px;
+    }
+    .qa-icon-3{
+        background-position:-289px -75px;
+    }
+    .qa-icon-4{
+        background-position:-364px -78px;
+    }
+    .icon-share{
+        background-position:-441px -74px;
+    }
+    .icon-trust{
+        background-position:-7px -191px;
+    }
+    .who-ico-1{
+        background-position:-53px -195px;
+    }
+    .who-ico-2{
+        background-position:-131px -195px;
+    }
+    .who-ico-3{
+        background-position:-205px -195px;
+    }
+    .engine-ico-1{
+        background-position:-269px -193px;
+    }
+    .engine-ico-2{
+        background-position:-323px -195px;
+    }
+    .engine-ico-3{
+        background-position:-378px -194px;
+    }
+    .dvd-pos::before{
+        background-position:-18px -342px;
+    }
+    .owl-nav{
+        @apply absolute;
+        @apply w-full;
+        @apply top-1/2;
+    }
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next{
+        @apply absolute;
+        @apply top-1/2;
+        @apply bg-[url('../images/sprite.png')];
+        @apply bg-no-repeat;
+        @apply w-7;
+        @apply h-[52px];
+    }
+    .owl-carousel .owl-nav button.owl-prev{
+        background-position:-15px -285px;
+        @apply -left-10;
+    }
+    .owl-carousel .owl-nav button.owl-next{
+        @apply -right-[60%];
+        background-position:-69px -285px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev span,
+    .owl-carousel .owl-nav button.owl-next span{
+        @apply block;
+        @apply indent-[-999rem];
+    }
+    .owl-dots-active{
+        @apply bg-[#0466f9];
+        @apply rounded;
+    }
+    .owl-dots{
+        counter-reset: my-awesome-counter;
+    }
+    .owl-dots li{
+        counter-increment: my-awesome-counter;
+        @apply relative;
+        @apply cursor-pointer;
+    }
+    .owl-dots li::before{
+        content: counter(my-awesome-counter);
+        @apply text-white;
+        @apply font-bold;
+        @apply text-lg;
+        @apply leading-none;
+        @apply inline-block;
+        @apply absolute;
+    }
+    .owl-dots-active p{
+        @apply pl-5
+    }
+    .sec-03 .owl-carousel .owl-item img,
+    .sec-04 .owl-carousel .owl-item img{
+        @apply w-auto;
+    }
+    .sec-04 .owl-carousel .owl-nav button.owl-prev{
+        background-position:-116px -285px;
+        @apply -left-14;
+    }
+    .sec-04 .owl-carousel .owl-nav button.owl-next{
+        @apply -right-14;
+        background-position:-169px -285px;
+    }
+    .sec-01 .owl-carousel .owl-nav button.owl-prev{
+        background-position:-116px -285px;
+        @apply left-[12%];
+    }
+    .sec-01 .owl-carousel .owl-nav button.owl-next{
+        @apply right-[12%];
+        background-position:-169px -285px;
+    }
+    .carousel .owl-carousel .owl-item img{
+        @apply mx-auto;
+    }
+    .tabs .tab-active,
+    .tabs .tab-active:hover{
+        @apply font-bold;
+        @apply text-[#0466f9];
+        @apply leading-none;
+        @apply border-[#0466f9];
+        @apply relative;
+    }
+    
+    .tabs .tab-active::after,
+    .tabs .tab-active:hover::after{
+        content:"";
+        @apply bg-[url('../images/sprite.png')];
+        @apply w-[22px];
+        @apply h-2;
+        @apply block;
+        background-position:-269px -289px;
+        bottom:-10px;
+        @apply absolute;
+        @apply left-1/2;
+        @apply -translate-x-1/2;
+    }
+    .img-360:first-child{
+        @apply block;
+    }
+    .img-360{
+        @apply hidden;
+        @apply mx-auto;
+        @apply cursor-pointer;
+        @apply object-cover;
+        /* @apply left-1/2;
+        @apply right-1/2;
+        @apply -translate-x-1/2;
+        @apply -translate-y-1/2; */
+
+    }
+}

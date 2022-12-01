@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "tw:build": "tailwindcss build ./styles/main.css -o ./styles/output.css --minify" 
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "jsdom": "^20.0.3",
+    "owl.carousel": "^2.3.4"
+  }
+}
