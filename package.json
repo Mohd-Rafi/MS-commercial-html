@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "tw:build": "tailwindcss build ./styles/main.css -o ./styles/output.css --minify" 
+    "tw:build": "tailwindcss build -i ./styles/main.css -o ./styles/output.css --watch" 
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
