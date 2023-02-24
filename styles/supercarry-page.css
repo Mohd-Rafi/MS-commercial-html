@@ -174,21 +174,12 @@ body{
     height: 283px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8.13%, #FFFFFF 67.32%);
   }
-  .plus_icon{
-    background-image:url(../images/supercarry/plus_icon.webp);
-    background-repeat: no-repeat;
-    background-position:center;
-  }
   .accordian-wrap{
     padding-right:70px;
   }
-  .minus_icon{
-    background-image:url(../images/supercarry/minus-icon.webp);
-    background-repeat: no-repeat;
-    background-position:center;
-  }
-  .accordian-body-inner{
-    display:none;
+
+  .accordian-body-inner.collapse{
+    visibility: visible !important;
   }
   .acc-btn-active{
     background-color:#fff;
@@ -205,8 +196,18 @@ body{
   .acc-btn{
     min-width:728px;
   }
-  .accordion-collapse-body{
-    /* display: none; */
+  .accordian-btn-inner:not(.collapsed) .toggle-icon{
+      background-image:url(../images/supercarry/minus-icon.webp);
+      background-repeat: no-repeat;
+      background-position:center;
+  }
+  .accordian-btn-inner .toggle-icon{
+    background-image:url(../images/supercarry/plus_icon.webp);
+    background-repeat: no-repeat;
+    background-position:center;
+  }
+  .accordian-body-inner .accordian-wrap{
+    padding-top:18px;
   }
   .sec-03 .owl-carousel .owl-dots{
     display: flex;
@@ -246,6 +247,16 @@ body{
   .collapsed.acc-btn-active:focus-visible{
     outline:0;
   }
+  .is-fixed .sc-1{
+    position: fixed;
+    top:0;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    z-index: 10999;
+    background-color:#fff;
+
+  }
   /* .accordian-btn-inner.t{
     padding-bottom:16px;
   } */
@@ -282,7 +293,10 @@ body{
     background: linear-gradient(180deg, rgba(218, 37, 29, 0) 0%, rgba(218, 37, 29, 0.22) 49.66%, rgba(218, 37, 29, 0) 100%);
   }
   .sc-testimonial{
-    background: linear-gradient(180deg, rgba(218, 37, 29, 0) 0%, rgba(218, 37, 29, 0.22) 49.66%, rgba(218, 37, 29, 0) 100%);
+    background:linear-gradient(180deg, rgba(208, 226, 252, 0) 0%, #D0E2FC 49.66%, rgba(208, 226, 252, 0) 100%);
+  }
+  .sec_new{
+    background:linear-gradient(180deg, rgba(208, 226, 252, 0) 0%, #D0E2FC 49.66%, rgba(208, 226, 252, 0) 100%);
   }
   .sec_new .owl-carousel .owl-item img{
     width:100%;
@@ -300,5 +314,13 @@ body{
     padding-right:0;
     line-height: 20px;
     font-weight: 700;
+    padding-right: 40px;
+  }
+  .ac-body{
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+  }
+  .section-car{
+    display:none;
   }
 }

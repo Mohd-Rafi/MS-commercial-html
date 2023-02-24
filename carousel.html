@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ 
+	background-color: white;
+  font-family: 'Varela Round', sans-serif;
+}
+.slider-section{
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 40px 20px;
+	background-color: white;
+}
+  .categories-title {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .cards {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+.categories-card-title {
+    position: absolute;
+    margin: 7px 7px;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 7px;
+    border-radius: 7px;
+		font-size: 15px;
+}
+  .card-outter {
+    display: inline-block;
+    padding-left: 20px;
+		height: 400px;
+  }
+.card-slider-overlay{
+  position: absolute;
+  width: 250px;
+  height: 400px;
+  border-radius: 7px;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+.card-slider-logo-container{
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  margin: 150px 0px;
+  z-index: 1;
+}
+.card-slider-logo{
+  position: absolute;
+  width: 230px;
+  padding: 0px 10px;
+}
+  .card {
+  	background-position: center;
+    background-size: cover;
+    width: 250px;
+		height: 400px;
+		border-radius: 7px;
+		filter: drop-shadow(2px 4px 6px #a8a8a8);
+    cursor: pointer;
+  }
+.card:hover > .card-slider-overlay {
+  transition: 340ms cubic-bezier(0.39, 0.58, 0.57, 1);
+  background-color: rgb(0, 0, 0, 0.8);
+}
+.card-see-all {
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 160px;
+    height: 160px;
+    border-radius: 251px;
+    line-height: 8;
+    font-size: 21px;
+    margin: 110px 13px;
+}
+.categories-card-list {
+    list-style: none;
+    width: 250px;
+    height: 157px;
+    bottom: 0px;
+    padding: 0px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-radius: 0px 0px 0px 0px;
+    margin: auto;
+}
+.categories-card-list-size {
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 79px;
+    height: 48px;
+    color: white;
+		margin: auto;
+		border: 1px solid #00D1FF;
+		text-align: center;
+		line-height: 3;
+}
+  .title {
+    font-size: 16px;
+    margin: 10px 0 6px;
+  }
+  .description {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 -20px;
+  }
+/*   .slider-container:before {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      content: "";
+      display: block;
+      width: 20px;
+      height: 100%;
+      left: 0;
+      background: linear-gradient(90deg, #FEFEFE, transparent);
+  }
+  .slider-container:after{
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      content: "";
+      display: block;
+      width: 50px;
+      height: 100%;
+      right: 0;
+      background: linear-gradient(-90deg, #FEFEFE, transparent);
+  } */
+  
+  .slider {
+    transition: transform 300ms ease-in; 
+  }
+  .slider:active {
+    transition: none;
+    cursor: grab;
+  }
+  .slider-indicator-bar {
+    position: relative;
+    height: 5px;
+    width: 200px;
+    margin: 30px auto 0;
+    background: #CCC;
+    border-radius: 2px;
+  }
+
+  .slider-indicator {
+    position: absolute;
+    left: 0;
+    content: "";
+    height: 6px;
+    background-color: black;
+    border-radius: 2px;
+    transition: left .2s ease-in-out;
+  }
+    </style>
+</head>
+<body>
+    <section class="slider-section">
+        <h1 class="categories-title">Top Categories</h2>
+        <div class="slider-container" style = "pading-right: 40px;">
+            <div class="cards slider">					
+                <div class="card-outter slider-item">
+                    <div class="card" style= "background-image: url(https://cdn.mainlinemenswear.co.uk/image/upload/v1638359034/uxtesting/MON-47%20%28brand-slider%29/hb_onjphk.png)">
+              <div class = "card-slider-logo-container">
+                <img class = "card-slider-logo" src = "https://cdn.mainlinemenswear.co.uk/image/upload/v1638800105/uxtesting/MON-47%20%28brand-slider%29/logos/White/slider-logo-hb_uk2ww2.png"/>
+              </div>
+              <div class  ="card-slider-overlay"></div>
+                    </div>
+                </div>
+                <div class="card-outter slider-item">
+                    <div class="card" style= "background-image: url(https://cdn.mainlinemenswear.co.uk/image/upload/v1638359034/uxtesting/MON-47%20%28brand-slider%29/ea_zezvhx.png)">
+              <div class = "card-slider-logo-container">
+                <img class = "card-slider-logo" src = "https://cdn.mainlinemenswear.co.uk/image/upload/v1638800105/uxtesting/MON-47%20%28brand-slider%29/logos/White/slider-logo-ea_qyzhsl.png"/>
+              </div>
+              <div class  ="card-slider-overlay"></div>
+                    </div>
+                </div>
+                <div class="card-outter slider-item">
+                    <div class="card" style= "background-image: url(https://cdn.mainlinemenswear.co.uk/image/upload/v1638359034/uxtesting/MON-47%20%28brand-slider%29/prl_fcle1h.png)">
+              <div class = "card-slider-logo-container">
+                <img class = "card-slider-logo" src = "https://cdn.mainlinemenswear.co.uk/image/upload/v1638800105/uxtesting/MON-47%20%28brand-slider%29/logos/White/slider-logo-prl_sp0kxw.png"/>
+              </div>
+              <div class  ="card-slider-overlay"></div>
+                    </div>
+                </div>
+                <div class="card-outter slider-item">
+                    <div class="card"  style= "background-image: url(https://cdn.mainlinemenswear.co.uk/image/upload/v1638359034/uxtesting/MON-47%20%28brand-slider%29/fp_stigxq.png)">
+              <div class = "card-slider-logo-container">
+                <img class = "card-slider-logo" src = "https://cdn.mainlinemenswear.co.uk/image/upload/v1638800105/uxtesting/MON-47%20%28brand-slider%29/logos/White/slider-logo-fp_pvkovt.png"/>
+              </div>
+              <div class  ="card-slider-overlay"></div>
+                    </div>
+                </div>
+          <div class="card-outter slider-item">
+                    <div class="card"  style= "background-image: url(https://cdn.mainlinemenswear.co.uk/image/upload/v1638359034/uxtesting/MON-47%20%28brand-slider%29/ao_ohek5n.png)">
+              <div class = "card-slider-logo-container">
+                <img class = "card-slider-logo" src = "https://cdn.mainlinemenswear.co.uk/image/upload/v1638800105/uxtesting/MON-47%20%28brand-slider%29/logos/White/slider-logo-adidas_ujlbmv.png"/>
+              </div>
+              <div class  ="card-slider-overlay"></div>
+                    </div>
+                </div>
+          <div class="card-outter slider-item">
+                    <div class="card"  style= "background-image: url(https://cdn.mainlinemenswear.co.uk/image/upload/v1638359034/uxtesting/MON-47%20%28brand-slider%29/n_yegeir.png)">
+              <div class = "card-slider-logo-container">
+                <img class = "card-slider-logo" src = "https://cdn.mainlinemenswear.co.uk/image/upload/v1638800105/uxtesting/MON-47%20%28brand-slider%29/logos/White/slider-logo-nike_gozh0n.png"/>
+              </div>
+              <div class  ="card-slider-overlay"></div>
+                    </div>
+                </div>
+          <div class="card-outter slider-item" style = "padding-right: 30px;">
+                    <div class="card">
+              <div class = "card-see-all">See all Brands</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-indicator-bar">
+                <div class="slider-indicator"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        //Liam Perkins official code --
+const THRESHOLD = 20;
+
+class SwipeSlider {
+  constructor(slider) {
+    this.startX = 0;
+    this.oldX = 0;
+    this.position = 0;
+    this.snapPosition = 0;
+    this.isDown = false;
+    this.userHasSwiped = false;
+
+    // Init
+    this.cacheElements(slider);
+    this.setDimensions();
+    this.setIndicator();
+    this.bindHandlers();
+  }
+
+  cacheElements(slider) {
+    this.slider = slider;
+    this.items = this.slider.querySelectorAll(".slider-item");
+    this.indicator = slider.parentNode.querySelector(".slider-indicator");
+    this.indicatorBar = slider.parentNode.querySelector(
+      ".slider-indicator-bar"
+    );
+  }
+
+  setDimensions() {
+    const spacing = 20; // TODO: get dynamically
+    const sliderWidth = this.slider.offsetWidth;
+    const itemWidth = this.items[0].offsetWidth;
+    const itemsWidth = this.items.length * itemWidth;
+
+    this.itemWidth = itemWidth;
+    this.maxAllowedW =
+      sliderWidth < itemsWidth ? sliderWidth - itemsWidth - spacing : 0;
+  }
+
+  setIndicator() {
+    if (!this.indicator) return;
+
+    const times =
+      (this.items.length * this.itemWidth) / this.slider.offsetWidth;
+    const length = this.indicatorBar.offsetWidth / times;
+
+    this.indicator.style.width = `${length}px`;
+  }
+
+  // Calculate
+
+  calculateBoundaries(position, bounce = true) {
+    const bounceMargin = bounce ? this.itemWidth / 4 : 0;
+
+    if (position > bounceMargin) return bounceMargin;
+    if (position < this.maxAllowedW - bounceMargin)
+      return this.maxAllowedW - bounceMargin;
+
+    return position;
+  }
+
+  calculateSnapPosition(position, swipeNext) {
+    let snapPosition =
+      (~~(position / this.itemWidth) - swipeNext) * this.itemWidth;
+
+    if (snapPosition < this.maxAllowedW) snapPosition = this.maxAllowedW;
+    return snapPosition;
+  }
+
+  moveIndicator(currPos) {
+    if (!this.indicator) return;
+
+    const indicatorPos =
+      this.indicatorBar.offsetWidth - this.indicator.offsetWidth;
+    const position = this.mapToRange(
+      currPos,
+      0,
+      this.maxAllowedW,
+      0,
+      indicatorPos
+    );
+
+    this.indicator.style.left = `${position}px`;
+  }
+
+  // Helpers
+
+  mapToRange(num, inMin, inMax, outMin, outMax) {
+    return ((num - inMin) * (outMax - outMin)) / (inMax - inMin + outMin);
+  }
+
+  // Handlers
+
+  bindHandlers() {
+    // TODO: maybe add mousedwon and touchstart listeners here. Then add inside them
+    // only the relevant move / end listeners (touch or mouse), and remove them on end
+    this.slider.addEventListener("touchstart", (e) => this.handleTouchStart(e));
+    this.slider.addEventListener("touchmove", (e) => this.handleTouchMove(e));
+    this.slider.addEventListener("touchend", (e) => this.handleEnd(e));
+
+    this.slider.addEventListener("mousedown", (e) => this.handleMouseStart(e));
+    this.slider.addEventListener("mousemove", (e) => this.handleMouseMove(e));
+    this.slider.addEventListener("mouseup", (e) => this.handleEnd(e));
+    this.slider.addEventListener("mouseleave", (e) => this.handleEnd(e));
+
+    this.slider.addEventListener("wheel", (e) => this.handleWheel(e));
+    this.slider.addEventListener("click", (e) => this.handleClick(e));
+    window.addEventListener("resize", () => this.handleResize());
+  }
+
+  // Start
+
+  handleTouchStart(e) {
+    if (e.touches.length > 1) return;
+
+    this.handleStart(e);
+  }
+
+  handleMouseStart(e) {
+    e.preventDefault();
+
+    this.handleStart(e);
+  }
+
+  handleStart(e) {
+    this.isDown = true;
+    this.userHasSwiped = false;
+    this.position = this.snapPosition;
+    this.startX = (e.pageX || e.touches[0].pageX) - this.slider.offsetLeft;
+
+    this.slider.classList.add("active");
+  }
+
+  // Move
+
+  handleTouchMove(e) {
+    if (e.touches.length > 1) return;
+
+    this.handleMove(e);
+  }
+
+  handleMouseMove(e) {
+    e.preventDefault();
+
+    this.handleMove(e);
+  }
+
+  handleMove(e) {
+    if (!this.isDown) return;
+
+    const pageX = e.pageX || e.touches[0].pageX;
+    const currX = pageX - this.slider.offsetLeft;
+    const dist = currX - this.startX;
+
+    if (Math.abs(dist) < THRESHOLD) return;
+
+    const swipeNext = this.oldX - currX < 0 ? 0 : 1; // Swipe direction
+    const accelerate = this.mapToRange(
+      Math.abs(dist),
+      THRESHOLD,
+      window.innerWidth,
+      1,
+      3
+    );
+    const position = this.calculateBoundaries(
+      this.position + dist * accelerate
+    );
+
+    e.preventDefault();
+
+    this.userHasSwiped = true;
+    this.snapPosition = this.calculateSnapPosition(position, swipeNext);
+    this.oldX = currX;
+
+    this.moveIndicator(this.snapPosition);
+    this.slider.setAttribute(
+      "style",
+      `transform: translate3d(${position}px, 0, 0)`
+    );
+  }
+
+  // End
+
+  handleEnd() {
+    this.isDown = false;
+
+    this.slider.classList.remove("active");
+    this.slider.setAttribute(
+      "style",
+      `transform: translate3d(${this.snapPosition}px, 0, 0)`
+    );
+  }
+
+  // Other Handlers
+
+  handleWheel(e) {
+    if (Math.abs(e.deltaX) < THRESHOLD) return;
+
+    const step = 40;
+    const sp = this.snapPosition + step * Math.sign(e.deltaX);
+
+    this.slider.classList.add("active"); // Will be removed on mouseleave
+    this.snapPosition = this.calculateBoundaries(sp, false);
+    this.slider.setAttribute(
+      "style",
+      `transform: translate3d(${this.snapPosition}px, 0, 0)`
+    );
+
+    this.moveIndicator(this.snapPosition);
+  }
+
+  handleResize() {
+    this.setIndicator();
+    this.setDimensions();
+    // TODO: Reposition slider at the right of the window,
+    // when resizing and a slider has reached its end position
+  }
+
+  handleClick(e) {
+    if (!this.userHasSwiped) return;
+
+    e.preventDefault(); // Disallow click while swiping
+    this.userHasSwiped = false;
+  }
+}
+
+const sliders = document.querySelectorAll(".slider");
+sliders.forEach((slider) => {
+  new SwipeSlider(slider);
+});
+
+    </script>
+    
+</body>
+</html>

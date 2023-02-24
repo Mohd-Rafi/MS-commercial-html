@@ -2,11 +2,15 @@ const plugin = require('tailwindcss/plugin');
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
-  content: ["./**/*.{html,js}"],
+  //content: ["./**/*.{html,js}"],
+  content: [
+    "./index.html",
+],
   theme: {
     extend: {
       colors: {
         'primary': '#DA251D',
+        'secondary': '#333333'
       },
       fontSize: {
         '13': '0.8125rem',
@@ -22,7 +26,7 @@ module.exports = {
       'gb':['gorditabold'],
     },
     backgroundImage: {
-      'footer-nav-arrow': "url('../images/footer-mob-arrow.png')",
+      'footer-nav-arrow': "url('../images/footer-mob-arrow.webp')",
     },
     screens: {
       'sm': {'max': '360px'},
