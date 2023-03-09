@@ -42,7 +42,31 @@
 
 @layer components {
 
-
+    .header-fixed{
+        position: fixed;
+        top:0;
+        right:0;
+        left:0;
+        background-color:#fff;
+        z-index:999;
+        
+    }
+    header{
+        @apply relative;
+        z-index:999;
+    }
+    header::after{
+        content:"";
+        @apply absolute;
+        @apply bottom-0;
+        @apply left-0;
+        @apply right-0;
+        box-shadow: 0px 0px 6px 0px rgba(20,32,37,0.13);
+        height: 100%;
+        width: 100%;
+        mix-blend-mode: hard-light;
+        z-index: -1;
+    }
 
     .sprite {
         background-image: url(../images/sprite.webp);
@@ -81,7 +105,7 @@
     }
 
     .icon-youtube {
-        background-position: -170px -42px;
+        background-position: -170px -44px;
     }
 
     .icon-youtube-hover {
@@ -252,24 +276,31 @@
         @apply bg-primary;
         transition: .5s ease;
       }
+      .tabs a:not(.tab-active) svg{
+        opacity:0;
+      }
     .tabs svg {
         position: absolute;
         bottom: 0;
         left: 0;
+        /* opacity:0; */
         fill: none;
         stroke-linecap: round;
         stroke: #da251d;
         stroke-width:4px;
         stroke-dasharray: 660;
-        stroke-dashoffset: 0;
-        transition: all 1s ease;
+        stroke-dashoffset: 660;
+        transition: opacity 300ms ease-out, stroke-dashoffset 0ms 300ms ease-out;
     }
 
-    /* .tabs .tab-active svg{
-        width:0;
-    } */
-    .kp_btn:hover svg {
-        stroke-dashoffset:660;
+    .tabs .tab-active svg{
+        stroke-dasharray: 660;
+        stroke-dashoffset:0;
+    }
+    .tabs a:not(.tab-active):hover svg {
+        opacity: 1;
+        stroke-dashoffset:0;
+        transition: opacity 300ms ease-out, stroke-dashoffset 900ms ease-out;
     }
     .sec-01{
         background-size:100%;
@@ -441,7 +472,10 @@
         left: 0;
         width: 100%;
     }
-
+    .back-top:hover{
+        transition:all ease 0.3s;
+        opacity:0.70;
+      }
     /* .js-carousel-1 .owl-dots .owl-dot:nth-child(1):after {
         background-color: #2398ce;
     } */
@@ -481,27 +515,23 @@
         background-color:#d92323;
         border-color:#d92323;
     } */
-    #threesixty{
+    /* #threesixty{
         margin-top:20px !important;
-    }
+    } */
     .dvd-xs{
         /* padding-left:20px; */
     }
-    .dvd-xs::before{
-        content:"";
-        width:16px;
-        height:68px;
-        display: block;
-        background-image:url(../images/tab-lin-mobile.png);
-        background-repeat: no-repeat;
-    }
+
 
     @media(width:1366px){
         .sec-01{
             background-size:cover;
         }
         .btn-360{
-            bottom:130px !important;
+            bottom:150px !important;
+        }
+        .carousel{
+            padding:30px 0 0 0;
         }
     }
 
@@ -618,7 +648,7 @@
     @screen xl {
         .sec-04 .owl-carousel .owl-nav button.owl-prev {
             background-position: -116px -285px;
-            @apply -left-14;
+            @apply -left-12;
             @apply ease-in;
             @apply duration-300;
             background-image:url(../images/testimonial-prev-arrow.webp);
@@ -630,7 +660,7 @@
         }
 
         .sec-04 .owl-carousel .owl-nav button.owl-next {
-            @apply -right-14;
+            @apply -right-12;
             /* background-position: -169px -285px; */
             @apply ease-in;
             @apply duration-300;
@@ -645,9 +675,13 @@
         .sec-04 .owl-carousel .owl-nav button.owl-next:hover{
             background-image:url(../images/testimonial-next-arrow-hover.webp);
         }
-        ,
+        
         .sec-04 .owl-carousel .owl-nav button.owl-prev:hover{
             background-image:url(../images/testimonial-prev-arrow-hover.webp);
+        }
+        .carousel{
+            height:350px;
+           
         }
     }
     .shareMenu .submenu {
@@ -750,7 +784,7 @@
         @apply leading-none;
         @apply border-primary;
         @apply relative;
-        @apply rounded;
+        @apply rounded-sm;
         /* @apply border-t-0;
         @apply border-r-0;
         @apply border-l-0; */
@@ -764,7 +798,7 @@
         @apply h-2;
         @apply block;
         background-position: -269px -289px;
-        bottom: -2px;
+        bottom: -3px;
         @apply absolute;
         @apply left-1/2;
         @apply -translate-x-1/2;
@@ -1420,8 +1454,8 @@
         }
         .sec-04 .owl-carousel button.owl-dot,
         .sec-06 .owl-carousel button.owl-dot{
-            @apply w-4;
-            @apply h-4;
+            @apply w-3;
+            @apply h-3;
             @apply inline-block;
             @apply rounded-full;
             @apply border;
@@ -1566,6 +1600,17 @@
         .swiper-horizontal>.swiper-scrollbar-custom{
             display:none;
         }
+        .dvd-xs::before{
+            content:"";
+            width:16px;
+            height:68px;
+            display: block;
+            background-image:url(../images/tab-lin-mobile.png);
+            background-repeat: no-repeat;
+        }
+        header {
+            height: 60px;
+        }
 
 
     }
@@ -1656,7 +1701,10 @@
         height: calc(100vh - 64px);
     } */
     .cr-thumb{
-        bottom:40px;
+        bottom:30px;
+    }
+    .cr-thumb .owl-nav{
+        margin-top:32px;
     }
     .trust-column > li:not(:last-child){
         margin-right:10px !important;
@@ -1730,7 +1778,20 @@
           width: 100%;
         }
     }
+    @keyframes ShowOutline {
+        0% {
+          opacity: 1;
+        }
+        75% {
+          stroke-dashoffset: 0;
+          opacity: 1;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          opacity: 0;
+        }
+      }
     .showBtn {
         @apply block !important;
-      }
+    }
 }

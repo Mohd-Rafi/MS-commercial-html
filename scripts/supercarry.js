@@ -1,20 +1,44 @@
 
     AOS.init();
-    // const threesixty = new ThreeSixty(document.getElementById('threesixty'), {
-    // image:'images/ext-360-img.webp',
-    // width: 741,
-    // height: 345,
-    // count: 36,
-    // perRow: 5,
-    // speed: 100,
-    // inverted: true,
-    // prev: document.getElementById('prev'),
-    // next: document.getElementById('next')
-    // });
-    // threesixty.stop();
+    const threesixty = new ThreeSixty(document.getElementById('threesixty1'), {
+    image:'images/ext-360-img.webp',
+    width: 741,
+    height: 355,
+    count: 36,
+    perRow: 5,
+    speed: 100,
+    inverted: true,
+    prev: document.getElementById('prev'),
+    next: document.getElementById('next')
+    });
+    threesixty.stop();
+    const threesixty2 = new ThreeSixty(document.getElementById('threesixty2'), {
+        image:'images/ext-360-img.webp',
+        width: 741,
+        height: 355,
+        count: 36,
+        perRow: 5,
+        speed: 100,
+        inverted: true,
+        prev: document.getElementById('prev'),
+        next: document.getElementById('next')
+    });
+    threesixty2.stop();
 
 
 $(document).ready(function(){
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop() >= 1) {
+            $('header').addClass('header-fixed');
+        }
+        else {
+            $('header').removeClass('header-fixed');
+        }
+    });
+
+
+
 
     var wheelCarousel = $('#wheel-carousel');
     wheelCarousel.owlCarousel({
@@ -166,7 +190,7 @@ $(document).ready(function(){
 
     $('#c2').owlCarousel({
             loop:true,
-            margin:10,
+            margin:17,
             nav:true,
             dots:false,
             responsive:{
@@ -388,7 +412,15 @@ if( windowpos >= 1500 ) {
 $(document).ready(function(){
 
 
-
+    var cngSec = $('.sc-cng').offset().top;
+    $(window).scroll(function(){
+        if($(window).scrollTop() >= cngSec - 300 ){
+            $(document).find('.sc-cng .green-car-img').animate({'left':'70%'}, "slow");
+            console.log('i am cng sec');
+        }else{
+            // $(document).find('.sc-cng .green-car-img').animate({'left':'56%'}, "slow");
+        }
+    });
 
     // $('.sec-08car').on('mousewheel', function(event, delta) {
     //     if(event.deltaY > 0) {
@@ -486,14 +518,7 @@ $(document).ready(function(){
         disable: window.innerWidth < 767,
         });
     }
-    if($(window).width()<767){
-        $('.f-accordion-item').click(function(e){
-            e.preventDefault();
-            $(this).next().addClass('pt-4').slideToggle();
-            $(this).parent().prevAll().find('.f-accordion-body').slideUp();
-            $(this).parent().nextAll().find('.f-accordion-body').slideUp();
-        });    
-    }
+
 
 
     // var WindowHeight = jQuery(window).height();
@@ -547,22 +572,31 @@ $(document).ready(function(){
         
         var activeTab = $(this).attr('href');
         $(activeTab).fadeIn();
+
+        var current = $(this),
+        position = current.position();
+        $('.js-tab-underline').css('left', position.left);
+        $('.js-tab-underline').css('width', $(this).outerWidth());
         return false;
     });
 
-    $('.drp-menu').hover(function(){
-        $(this).toggleClass('active');
-    });
+    // $('.drp-menu').hover(function(){
+    //     $(this).toggleClass('active');
+    // });
 
     
-    $("header nav ul li").hover(
-        function() {
-            $(this).children(".dropdown-menu").slideDown('100');
-        },
-        function() {
-            $(this).children(".dropdown-menu").slideUp('100');
+    $("header nav ul li").hover(function() {
+        
+        var isHovered = $(this).is(":hover");
+        if (isHovered) {
+          $(this).children(".dropdown-menu").stop().slideDown(300);
+          $('.js-tab-underline').css('left', '38px');
+          $('.js-tab-underline').css('width', $('.dropdown-tab-link.active').outerWidth());
+        } else {
+          $(this).children(".dropdown-menu").stop().slideUp(300);
         }
-    );
+      });
+
 
     $('#btn-search').click(function(){
         $(this).parents('#main-nav').siblings('.search-block').show();
@@ -649,22 +683,29 @@ $(document).ready(function(){
         $('#modal-carousel').trigger('prev.owl.carousel', [300]);
     });
 
-    $('.f-accordion-item').click(function(){
-        $(this).next().addClass('pt-4').slideToggle();
-        $(this).parent().prevAll().find('.f-accordion-body').slideUp();
-        $(this).parent().nextAll().find('.f-accordion-body').slideUp();
-    });    
+    if($(window).width()<767){
+        $('.f-accordion-item').click(function(e){
+            e.preventDefault();
+            $(this).next().addClass('pt-4').slideToggle();
+            $(this).parent().prevAll().find('.f-accordion-body').slideUp();
+            $(this).parent().nextAll().find('.f-accordion-body').slideUp();
+        });    
+    }
+
+    // $('.f-accordion-item').click(function(){
+    //     $(this).next().addClass('pt-4').slideToggle();
+    //     $(this).parent().prevAll().find('.f-accordion-body').slideUp();
+    //     $(this).parent().nextAll().find('.f-accordion-body').slideUp();
+    // });    
 
 
-    $('.acc-btn').click(function(){
-        $(this).removeClass('mb-1');
-        $('.acc-btn').removeClass('acc-btn-active');
-        $(this).addClass('acc-btn-active');
-        // $(this).next(".accordion-collapse-body").slideToggle();
-        // $(this).prevAll(".accordion-collapse-body").slideUp();
-        $(this).prevAll().addClass('mb-1');
-        $(this).nextAll().addClass('mb-1');
-    });
+    // $('.acc-btn').click(function(){
+    //     $(this).removeClass('mb-1');
+    //     $('.acc-btn').removeClass('acc-btn-active');
+    //     $(this).addClass('acc-btn-active');
+    //     $(this).prevAll().addClass('mb-1');
+    //     $(this).nextAll().addClass('mb-1');
+    // });
 
     $('.bar-click').click(function(){
         $(this).parents('header').siblings('.mobile-nav').removeClass('hidden').addClass('block');
@@ -701,6 +742,7 @@ jQuery(function(){
         margin:0,
         nav:false,
         dots:false,
+        responsiveClass:true,
         responsive:{
             0:{
                 items:1,
@@ -718,3 +760,41 @@ jQuery(function(){
         }
     });
 });
+
+$(function(){
+//     $('#owl-carousel-vertical').owlCarousel({
+//       items: 1,
+//       loop: false,
+//       nav: false,
+//       margin: 0
+//     });
+//     // this code below enables drag and drop vertically. Unfortunately I was unable to disable horizontal drag and drop so it will remain active, but we already have something now =D
+//     $('#owl-carousel-vertical').data('owl.carousel').difference = function(first, second) {
+//       return {
+//           x: first.x - second.x + (first.y - second.y),
+//           y: first.y - second.y
+//       };
+//   };
+const slider = $(".hero-slider");
+
+slider.slick({
+  vertical: true,
+  verticalSwiping: true,
+  cssEase: "ease-in",
+  dots: true,
+  infinite: true,
+  speed: 350,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+});
+
+slider.on( 'mousewheel DOMMouseScroll', function(e) {
+  var last_section = jQuery('.hero-slider').find('.slide').last();
+  if (!last_section.hasClass('slick-active')) {
+    e.preventDefault();
+  }
+  
+
+});
+  });

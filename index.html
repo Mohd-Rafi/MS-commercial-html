@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xml:lang>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +7,9 @@
     <title>Maruti Suzuki Commercial - Home Page</title>
     <link rel="icon" href="images/favicon.webp" type="image/webp" />
     <link rel="stylesheet" href="styles/output.css">
-    <!-- <link rel="preload" href="styles/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
-    <!-- <link rel="preconnect" href="//fonts.googleapis.com">
-    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin> -->
-    <!-- <link rel="preconnect" href="//fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="styles/owl.carousel.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <!-- <link rel="stylesheet" href="styles/aos.css"> -->
-    <!-- <link rel="preload" href="styles/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="styles/owl.carousel.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
-    <style>
-            .header-fixed{
-        position: fixed;
-        top:0;
-        right:0;
-        left:0;
-        background-color:#fff;
-        z-index:999;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.12);
-    }
-    </style>
 
 </head>
 <body>
@@ -40,7 +20,7 @@
                       <img src="images/logo.webp" alt="" title="" width="320" height="22" class="hidden xl:block">
                       <img src="images/logo-xs.webp" alt="" title="" width="284" height="20" class="block xl:hidden logo-xs-360">
                     </div>
-                    <nav class="ml-auto hidden xl:block">
+                    <nav class="ml-auto hidden xl:block" role="Topmenu" aria-labelledby="nav1">
                         <ul class="flex space-x-2.5 2xl:space-x-7 list-none">
                             <li class="drp-menu py-[22px]">
                                 <a href="#" class="text-black text-sm 2xl:text-[15px] font-medium hover:text-primary relative after:absolute 
@@ -114,14 +94,7 @@
                                 after:w-0 after:left-1/2 after:h-0.5 after:bg-primary after:bottom-[-5px] after:ease-in after:duration-300 
                                 hover:after:w-full hover:after:left-0 group">
                                 About Us 
-                                <!-- <i class="sprite icon-drp-arrow group-hover:icon-drp-arrow-hover"></i> -->
                             </a>
-                                <!-- <ul class="list-none absolute top-0 hidden">
-                                    <li><a href="#">drop down</a></li>
-                                    <li><a href="#">drop down</a></li>
-                                    <li><a href="#">drop down</a></li>
-                                    <li><a href="#">drop down</a></li>
-                                </ul> -->
                             </li>
                             <li class="py-[22px]">
                                 <a href="#" class="text-black text-sm 2xl:text-[15px] font-medium hover:text-primary relative after:absolute 
@@ -139,10 +112,6 @@
                                 <a href="#" class="text-black text-sm 2xl:text-[15px] font-medium hover:text-primary relative after:absolute 
                                 after:w-0 after:left-1/2 after:h-0.5 after:bg-primary after:bottom-[-5px] after:ease-in after:duration-300 
                                 hover:after:w-full hover:after:left-0">Media</a></li>
-                            <!-- <li class="py-[22px]">
-                                <a href="#" class="text-black text-sm 2xl:text-[15px] font-medium hover:text-primary relative after:absolute 
-                                after:w-0 after:left-1/2 after:h-0.5 after:bg-primary after:bottom-[-5px] after:ease-in after:duration-300 
-                                hover:after:w-full hover:after:left-0">Rewards</a></li> -->
                             <li class="py-[22px]">
                                 <a href="#" class="text-black text-sm 2xl:text-[15px] font-medium hover:text-primary relative after:absolute 
                                 after:w-0 after:left-1/2 after:h-0.5 after:bg-primary after:bottom-[-5px] after:ease-in after:duration-300 
@@ -171,7 +140,6 @@
                                 </ul>
                             </li>
                             <li class="py-[22px]"><a href="#" class="text-black text-sm font-medium" id="btn-search"><i class="sprite icon-search"></i></a></li>
-                            <!-- <li class="py-[22px]"><a href="#" class="text-black text-sm font-medium"><i class="sprite icon-bar"></i></a></li> -->
                         </ul>
                     </nav>
                     <div class="ml-auto block md:hidden">
@@ -233,14 +201,8 @@
             </div>
     </header>
     <!-- mobile menu -->
-    <nav class="mobile-nav fixed w-full h-full inset-0 z-10 hidden">
+    <nav class="mobile-nav fixed w-full h-full inset-0 z-10 hidden" role="Secondnavigation" aria-labelledby="nav2">
         <ul class="px-5 bg-white mobile-nav-block">
-            <!-- <li class="flex items-center mt-11">
-                <a href="javascript:void(0)" class="back-arrow block w-[22px] h-[14px] mr-2.5">
-                    <img src="images/back-arrow.webp" alt="" width="22" height="14">
-                </a>
-                <input type="text" class="w-full block px-2 py-1 border-0 border-l border-primary placeholder:text-base placeholder:leading-none placeholder:text-[#ABABAB] focus:border-primary focus:ring-primary" placeholder="Search">
-            </li> -->
             <li><a href="#" class="text-base text-black font-medium leading-none block border-b border-[#E7E7E7] py-6">Home</a></li>
             <li><a href="#" class="text-base text-black font-medium leading-none block border-b border-[#E7E7E7] py-6">Vehicles</a></li>
             <li><a href="#" class="text-base text-black font-medium leading-none block border-b border-[#E7E7E7] py-6">About Us</a></li>
@@ -254,97 +216,13 @@
     </nav>
     <!-- mobile menu -->
 
-    <!-- <section class="banner relative">
-        <div class="video-banner">
-            <video width="100%" height="300" autoplay loop muted>
-                <source src="vid/banner.mp4" type="video/mp4">
-            </video>
-            <img src="images/banner-mobile.webp" alt="banner" title="" width="1125" height="1257" class="w-full md:hidden" loading="lazy">
-        </div>
-
-        <div class="absolute top-1/2 -translate-y-1/2 right-[12px] space-y-3 z-10 hidden md:block">
-            <a href="#" class="sprite w-9 h-9 block icon-fb ease-in duration-150 cursor-pointer hover:icon-fb-hover"></a>
-            <a href="#" class="sprite w-9 h-9 block icon-twitter ease-in duration-150 cursor-pointer hover:icon-twitter-hover"></a>
-            <a href="#" class="sprite w-9 h-9 block icon-youtube ease-in duration-150 cursor-pointer hover:icon-youtube-hover"></a>
-            <a href="#" class="sprite w-9 h-9 block icon-instagram ease-in duration-150 cursor-pointer hover:icon-instagram-hover"></a>
-        </div>
-        <div class="absolute top-0 right-0 bottom-0 left-0">
-            <div class="container mx-auto mt-[55px] xl:mt-[105px] px-5 xl:px-0">
-                <div class="font-bold text-3xl xl:text-4xl text-black uppercase">
-                    <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" class="block banner-heading">Uncommon Design.</span>
-                    <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" class="block banner-heading">Unprecedented</span>
-                    <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250" class="block banner-heading">Engineering</span>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <button class="py-2 px-6 md:py-3 md:px-8 bg-[#0466f9] text-white font-medium text-sm md:text-base rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 mt-2.5 md:mt-5 2xl:mt-10 border border-[#0466f9] hover:bg-transparent hover:text-[#0466f9] hover:border-[#0466f9] ease-in duration-300">
-                        Explore 
-                    </button>
-                    <button class="py-2 px-6 md:py-3 md:px-8 bg-transparent border-[#0466f9] border text-[#0466f9] font-medium text-sm md:text-base rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 ml-2.5 md:ml-4 mt-2.5 md:mt-5 2xl:mt-10 hover:bg-[#0466f9] hover:text-white hover:border-[#0466f9] ease-in duration-300">
-                        Request a Quote
-                    </button>
-                    <div class="max-w-[250px]  xl:max-w-[395px] mt-10 cr-thumb hidden xl:block">
-                        <div class="owl-carousel" id="carousel-thumb1">
-                            <div class="item relative">
-                                <img src="images/cr-thumb-1.webp" alt="">
-                                <div class="absolute left-4 bottom-3">
-                                    <div class="text-[10px] font-medium text-white/[0.50] leading-none mb-1.5">01</div>
-                                    <div class="text-sm font-medium text-white uppercase leading-none">Super Carry </div>
-                                </div>
-                            </div>
-                            <div class="item relative">
-                                <img src="images/cr-thumb-2.webp" alt="">
-                                <div class="absolute left-4 bottom-3">
-                                    <div class="text-[10px] font-medium text-white/[0.50] leading-none mb-1.5">02</div>
-                                    <div class="text-sm font-medium text-white uppercase leading-none">tOUR h1</div>
-                                </div>
-                            </div>
-                            <div class="item relative">
-                                <img src="images/cr-thumb-1.webp" alt="">
-                                <div class="absolute left-4 bottom-3">
-                                    <div class="text-[10px] font-medium text-white/[0.50] leading-none mb-1.5">03</div>
-                                    <div class="text-sm font-medium text-white uppercase leading-none">tOUR <h2></h2></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                banner thumb carousel mobile
-                <div class="max-w-[250px]  2xl:max-w-[395px] absolute bottom-5 cr-thumb block sm:hidden">
-                    <div class="owl-carousel" id="carousel-thumb">
-                        <div class="item relative">
-                            <img src="images/cr-thumb-1.webp" alt="">
-                            <div class="absolute left-2 bottom-1">
-                                <div class="text-[8px] font-medium text-white/[0.50] leading-none mb-0.5">01</div>
-                                <div class="text-[11px] font-medium text-white uppercase leading-none">Super Carry </div>
-                            </div>
-                        </div>
-                        <div class="item relative">
-                            <img src="images/cr-thumb-2.webp" alt="">
-                            <div class="absolute left-2 bottom-1">
-                                <div class="text-[8px] font-medium text-white/[0.50] leading-none mb-0.5">02</div>
-                                <div class="text-[11px] font-medium text-white uppercase leading-none">tOUR h1</div>
-                            </div>
-                        </div>
-                        <div class="item relative">
-                            <img src="images/cr-thumb-1.webp" alt="">
-                            <div class="absolute left-2 bottom-1">
-                                <div class="text-[8px] font-medium text-white/[0.50] leading-none mb-0.5">03</div>
-                                <div class="text-[11px] font-medium text-white uppercase leading-none">tOUR <h2></h2></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="banner relative xl:h-[582px] 2xl:h-[814px]">
-        <!-- <img src="images/banner.webp" alt="banner" title="" width="1576" height="668" class="w-full" loading="lazy"> -->
         <div class="js-carousel-1 owl-carousel">
             <div class="item">
                 <div class="video-banner">
                     <video width="100%" height="300" autoplay loop muted playsinline poster="images/banner-poster.webp">
                         <source src="vid/banner.mp4" type="video/mp4">
+                        <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
                     </video>
                 </div>
                 <img src="images/banner-mobile.webp" alt="banner" title="" width="1125" height="1257" class="w-full md:!hidden banner-height relative">
@@ -371,6 +249,7 @@
                 <div class="video-banner">
                     <video width="100%" height="300" autoplay loop muted playsinline poster="images/banner-poster.webp">
                         <source src="vid/banner.mp4" type="video/mp4">
+                        <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
                     </video>
                 </div>
                 <img src="images/banner-mobile.webp" alt="banner" title="" width="1125" height="1257" class="w-full md:!hidden banner-height relative">
@@ -468,20 +347,6 @@
 
 
         <div class="absolute top-[206px] right-[12px] space-y-3 z-10 hidden lg:block">
-            <!-- <a href="#" class="w-9 h-9 block ease-in duration-150 cursor-pointer">
-                <img src="images/fb-icon.webp" alt="">
-            </a>
-            <a href="#" class="w-9 h-9 block ease-in duration-150 cursor-pointer">
-                <img src="images/twt-icon.webp" alt="">
-            </a>
-            <a href="#" class="w-9 h-9 block ease-in duration-150 cursor-pointer">
-                <img src="images/utube-icon.webp" alt="" srcset="">
-            </a>
-            <a href="#" class="w-9 h-9 block ease-in duration-150 cursor-pointer">
-                <img src="images/insta-icon.webp" alt="">
-            </a> -->
-
-
             <a href="#" class="w-9 h-9 block ease-in duration-150 cursor-pointer relative
             before:icon-fb before:block before:sprite before:w-9 before:h-9 before:hover:ease-in before:hover:duration-150
             before:hover:opacity-0 before:hover:ease-in before:hover:duration-150
@@ -524,11 +389,10 @@
     </section>
 
     <section class="sec-01 bg-[url('../images/sec-01-bg-new-mob.webp')] xl:bg-[url('../images/sec-01-bg-new.webp')] bg-no-repeat max-sm:bg-cover bg-center 2xl:bg-[left_top_-122px]">
-        <!-- <img src="images/sec-01.webp" alt="" width="999" height="503" class="w-full"> -->
         <div class="container mx-auto">
             <h1 class="text-center text-black text-2xl md:text-3xl font-bold uppercase leading-none max-sm:pb-5 pt-20 xl:pt-14 xl:pb-2">vehicle range</h1>
             <div class="tabs text-center flex gap-x-2.5 justify-center max-sm:mb-[60px] xl:mb-6 space-x-1.5 xl:pt-2.5">
-                <a href="javascript:void(0)" class="2xl:min-w-[141px] max-sm:text-base text-xl font-medium 
+                <a href="#tab-1" class="2xl:min-w-[141px] max-sm:text-base text-xl font-medium 
                 text-black max-sm:!leading-[0.6] leading-none py-[11px] xl:py-2 px-1.5 relative 
                 rounded-none hover:!text-primary hover:font-bold hover:after:absolute 
                 hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:bg-[url('../images/sprite.webp')] 
@@ -538,20 +402,13 @@
                 tab-active ease-in duration-300 kp_btn
                 2xl:w-[141px] h-10
 
-                " data-tab="tab-1">
+                ">
                 Goods Carrier
-                <!-- <span>Goods Carrier</span> -->
                 <svg width="145" height="40" viewBox="0 0 145 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.782 2H139.218C140.322 2 141.218 2.895 141.218 4V33.1C141.218 35.105 140.322 35.1 139.218 35.1H4.782C3.678 35.1 2.782 35.105 2.782 33.1V4C2.782 2.895 3.678 2 4.782 2Z" stroke="#DA251D" stroke-width="2"/>
                     </svg>
-                <!-- <svg viewBox="0 0 141 40">
-                    <rect width="141" height="40" rx="10" ry="10" />
-                </svg> -->
-                <!-- <svg width="182" height="39" viewBox="0 0 182 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.10001 1.10001H176.1C178.105 1.10001 178.1 2.89501 178.1 3.10001V33.1C178.1 35.104 178.105 35.1 176.1 35.1H3.10001C2.89501 35.1 1.10001 35.104 1.10001 33.1V3.10001C1.10001 2.89501 2.89501 1.10001 3.10001 1.10001Z" stroke="#DA251D" stroke-width="2"/>
-                </svg> -->
             </a>
-            <a href="javascript:void(0)" class="2xl:min-w-[141px] max-sm:text-base text-xl font-medium 
+            <a href="#tab-2" class="2xl:min-w-[141px] max-sm:text-base text-xl font-medium 
             text-black max-sm:!leading-[0.6] leading-none py-[11px] xl:py-2 px-1.5 
             relative 
             rounded-none hover:!text-primary hover:font-bold hover:after:absolute 
@@ -561,21 +418,17 @@
             hover:after:bottom-[-10px] 
             ease-in duration-300 kp_btn 2xl:w-[180px] h-10
 
-            " data-tab="tab-2">
+            ">
             Passenger Carrier
-                <!-- <span>Passenger Carrier</span> -->
                 <svg width="182" height="40" viewBox="0 0 182 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.10001 1.10001H176.1C178.105 1.10001 178.1 2.89501 178.1 3.10001V33.1C178.1 35.104 178.105 35.1 176.1 35.1H3.10001C2.89501 35.1 1.10001 35.104 1.10001 33.1V3.10001C1.10001 2.89501 2.89501 1.10001 3.10001 1.10001Z" stroke="#DA251D" stroke-width="2"/>
                 </svg>
-                <!-- <svg x="0px" y="0px" viewBox="0 0 180 40">
-                    <rect width="180" height="40" rx="10" ry="10" />
-                </svg> -->
             </a>
             </div>
 
         </div>
         <div class="tab-content w-full">
-            <div class="tab-pane relative">
+            <div class="tab-pane relative" id="tab-1">
                 <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center">
                     <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
                         <div class="flex-shrink-0">
@@ -652,9 +505,103 @@
                 </div>
                 <div id="threesixty" class=" w-full h-full hidden"></div>
                 <div class="">
-                    <a href="javascript:void(0)" class="w-full max-w-[155px] md:max-w-[76px] absolute left-1/2 -translate-x-1/2 bottom-[100px] lg:bottom-[156px] z-10 btn-360">
+                    <a href="javascript:void(0)" class="w-full max-w-[155px] md:max-w-[76px] absolute left-1/2 -translate-x-1/2 bottom-[100px] xl:bottom-[144px] z-10 btn-360">
                         <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="hidden md:block drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
-                        <img src="images/btn-360-close.webp" alt="" width="76" height="76" loading="lazy" class="hidden close-icon">
+                        <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy" class="hidden close-icon">
+                        <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="hidden">
+                    </a>
+                    <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
+                </div>
+                <div class="flex justify-center pb-24 xl:pb-4 space-x-4 xl:items-center">
+                    <a href="#" class="xl:font-gm btn bg-primary px-4 py-3.5 md:px-7 md:py-3.5 text-white text-sm md:text-base 
+                    md:leading-none font-medium rounded-md block w-full max-w-[118px] text-center
+                    border border-primary hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300">Explore</a>
+                    <a href="#" class="xl:font-gm btn border border-primary bg-transparent px-4 py-3.5 md:px-7 md:py-3.5 text-primary text-sm md:text-base 
+                    md:leading-none font-medium rounded-md block w-full max-w-[172px] text-center
+                    border border-primary hover:bg-primary hover:text-white hover:border-primary ease-in duration-300">Calculate EMI</a>
+                </div>
+            </div>
+
+            <div class="tab-pane relative" id="tab-2">
+                <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center">
+                    <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
+                        <div class="flex-shrink-0">
+                            <i class="sprite w-[33px] h-[33px] md:w-[44px] md:h-[44px] engine-ico-1 block"></i>
+                        </div>
+                        <div class="ml-3 xl:ml-3 xl:flex-1 max-sm:max-w-[121px]">
+                            <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Starting from</p>
+                            <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none flex">₹ <span class="digit-start">5 93 000*</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden xl:block">
+                        <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                    </div>
+                    <div class="flex flex-initial items-center max-sm:row-start-2 xl:mx-4 max-sm:basis-2/5">
+                        <div class="flex-shrink-0">
+                            <i class="sprite w-[36px] h-[29px] md:w-[45px] md:h-[33px] engine-ico-2 block"></i>
+                        </div>
+                        <div class="ml-2.5 xl:ml-3 xl:flex-1 xl:min-w-[95px]">
+                            <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Engine</p>
+                            <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none">
+                                <span class="digit-cc">1196</span>cc</div>
+                        </div>
+                    </div>
+                    <div class="ml-4 hidden xl:block">
+                        <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                    </div>
+                    <div class="flex flex-initial items-center  max-sm:row-start-2 max-sm:justify-end
+                    max-sm:relative max-sm:basis-2/5 dvd-xs">
+                        <div class="flex-shrink-0">
+                            <i class="sprite w-[36px] h-[36px] md:w-[44px] md:h-[44px] engine-ico-3 block"></i>
+                        </div>
+                        <div class="ml-1.5 xl:ml-3 xl:flex-1">
+                            <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Variant</p>
+                            <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none whitespace-nowrap">Petrol / CNG</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel 
+                max-sm:relative
+                max-sm:after:absolute
+                max-sm:after:left-0
+                max-sm:after:right-0
+                max-sm:after:bottom-0
+                max-sm:after:w-full
+                max-sm:after:h-[83px]
+                max-sm:after:bg-[url('../images/circle-line.webp')]
+                max-sm:after:bg-no-repeat
+                max-sm:after:bg-cover
+                max-sm:h-[187px]
+                max-sm:mt-[50px]
+                
+                ">
+                <div class="carousel-wrap">
+                    <div class="owl-carousel" id="carousel-psgr">
+                        <div class="item xl:w-[625px] 2xl:w-[741px] mx-auto">
+                            <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
+                        </div>
+                        <div class="item  xl:w-[625px] 2xl:w-[741px] mx-auto">
+                            <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
+                        </div>
+                        <div class="item xl:w-[625px] 2xl:w-[741px] mx-auto">
+                            <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                    <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" 
+                    class="block mx-auto md:hidden btn-360-xs-mob 
+                    max-sm:absolute
+                    max-sm:left-1/2
+                    max-sm:-translate-x-1/2
+                    max-sm:-bottom-[76px]
+                    ">
+                </div>
+                <div id="threesixty-2" class="w-full h-full hidden mx-auto"></div>
+                <div class="">
+                    <a href="javascript:void(0)" class="w-full max-w-[155px] md:max-w-[76px] absolute left-1/2 -translate-x-1/2 bottom-[100px] xl:bottom-[144px] z-10 btn-360">
+                        <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="hidden md:block drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
+                        <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy" class="hidden close-icon">
                         <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="hidden">
                     </a>
                     <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
@@ -678,9 +625,8 @@
                 <div class="xl:pl-[17%] max-sm:mb-5">
                     <video width="100%" height="100%" class="" playsinline autoplay muted>
                         <source src="vid/map.mp4" type="video/mp4">
+                        <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
                     </video>
-                    <!-- <img src="images/map-india-xs.webp" alt="" title="" width="252" height="283" class="hidden xl:block"> -->
-                    <!-- <img src="images/map-india-xs.webp" alt="" title="" width="202" height="227" class="mx-auto block md:hidden"> -->
                 </div>
                 <div class="bg-white xl:drop-shadow-xl xl:ml-auto py-7 md:py-10 xl:pl-20 2xl:absolute xl:left-[41%] xl:w-[calc(100%-41%)] 
                 rounded max-sm:shadow-[0_0_27px_0_rgba(0,0,0,0.1)] max-sm:relative max-sm:pt-16">
@@ -740,7 +686,7 @@
 
                 </div>
             </div>
-            <!-- <h1 class="text-[240px] text-[#2b2b2b]/[.07] text-center uppercase font-black leading-none slide-left hidden 2xl:block">About Us</h1> -->
+            
         </div>
         <div class="h-[240px] w-full relative overflow-hidden hidden xl:block">
             <h1 class="xl:text-[200px] 2xl:text-[232px] text-[#2b2b2b]/[.07] text-center uppercase font-black leading-none xl:absolute xl:left-1/2 xl:-translate-x-1/2 h-[240px] 
@@ -793,11 +739,11 @@
                                 </div>
                             </div>
                             <div class="owl-dots1 flex space-x-1.5 mt-5 justify-center max-sm:mb-3" id="c1-custom-dots">
-                                <button role="button" class="owl-dotclick owl_dot1 w-4 h-4 border border-white rounded-full block active_new"><span></span></button>
-                                <button role="button" class="owl-dotclick owl_dot2 w-4 h-4 border border-white rounded-full block"><span></span></button>
-                                <button role="button" class="owl-dotclick owl_dot3 w-4 h-4 border border-white rounded-full block"><span></span></button>
-                                <button role="button" class="owl-dotclick owl_dot4 w-4 h-4 border border-white rounded-full block"><span></span></button>
-                                <button role="button" class="owl-dotclick owl_dot5 w-4 h-4 border border-white rounded-full block"><span></span></button>
+                                <button role="button" class="owl-dotclick owl_dot1 w-3 h-3 xl:w-4 xl:h-4 border border-white rounded-full block active_new"><span></span></button>
+                                <button role="button" class="owl-dotclick owl_dot2 w-3 h-3 xl:w-4 xl:h-4 border border-white rounded-full block"><span></span></button>
+                                <button role="button" class="owl-dotclick owl_dot3 w-3 h-3 xl:w-4 xl:h-4 border border-white rounded-full block"><span></span></button>
+                                <button role="button" class="owl-dotclick owl_dot4 w-3 h-3 xl:w-4 xl:h-4 border border-white rounded-full block"><span></span></button>
+                                <button role="button" class="owl-dotclick owl_dot5 w-3 h-3 xl:w-4 xl:h-4 border border-white rounded-full block"><span></span></button>
                             </div>
                         </div>
                     </div>
@@ -831,7 +777,6 @@
             </div>
             <div class="w-full absolute left-0 right-0 bottom-[-48px] md:bottom-[-110px] car-group z-10" data-aos="zoom-in" data-aos-delay="30" data-aos-duration="1000">
                 <img src="images/car-group.webp" alt="" width="1302" height="196" class="hidden md:block mx-auto" loading="lazy">
-                <!-- <img src="images/car-group-xs.webp" alt="" width="375" height="97" class="block md:hidden max-auto" loading="lazy"> -->
             </div>
         </div>
     </section>
@@ -965,19 +910,7 @@
                     </div>
                 </div>
             </div>
-
-            <ul class="list-none flex justify-around md:justify-center mt-5 lg:mt-4 trust-column" data-aos="fade-up" data-aos-delay="760" data-aos-duration="1000">
-                <li class="flex items-center text-sm md:text-lg font-medium text-black max-sm:mr-[19px] max-sm:whitespace-nowrap">
-                    <i class="sprite min-w-[24px] w-6 h-6 md:w-7 md:h-7 block icon-trust bg-primary rounded-full mr-1 md:mr-4"></i>
-                    Trust Of <br class="xl:hidden"> Maruti Suzuki
-                </li>
-                <li class="flex items-center xl:ml-12 text-sm md:text-lg font-medium text-black max-sm:mr-[31px]"><i class="sprite min-w-[24px] w-6 h-6 md:w-7 md:h-7 block icon-trust bg-primary rounded-full mr-1 md:mr-4"></i>Reliability</li>
-                <li class="flex items-center xl:ml-16 text-sm md:text-lg font-medium text-black max-sm:whitespace-nowrap">
-                    <i class="sprite min-w-[24px] w-6 h-6 md:w-7 md:h-7 block icon-trust bg-primary rounded-full mr-1 md:mr-4"></i>
-                    Large and <br class="xl:hidden">Stable Deck
-                </li>
-            </ul>
-            <button type="button" class="btn bg-primary px-7 py-3.5 text-white text-sm md:text-base md:leading-none font-medium rounded-md block mx-auto mt-4 md:mt-7 border hover:bg-transparent
+            <button type="button" class="btn bg-primary px-7 py-3.5 text-white text-sm md:text-base md:leading-none font-medium rounded-md block mx-auto mt-6 md:mt-7 border hover:bg-transparent
              hover:text-primary hover:border-primary ease-in duration-300" data-aos="fade-up" data-aos-delay="770" data-aos-duration="1000">View All Testimonials</button>
         </div>
     </section>
@@ -1095,62 +1028,8 @@
                     </div>
                 </div>
                 </div>
-            
-
-            
-                <!-- scrollbar -->
                 <div class="swiper-scrollbar swiper-scrollbar-custom"></div>
             </div> 
-
-
-
-
-
-            <div class="frame">
-                <div class="owl-carousel" id="wheel-carousel">
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-                    <!-- <li> -->
-
-                    <!-- </li> -->
-
-
-
-                    </div>
-            </div>
-            
-    
-            <!-- <ul class="pages"></ul> 
-            <div class="scrollbar">
-                <div class="handle">
-                    <div class="mousearea"></div>
-                </div>
-            </div> -->
             <div class="text-center block xl:hidden">
                 <a href="#" class="btn bg-primary px-7 py-3.5 text-white text-sm font-medium rounded-[7px] 
                 inline-block mx-auto mt-6 border hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300" data-aos="fade-up" data-aos-delay="770" data-aos-duration="1000">Read All News</a>
@@ -1164,10 +1043,10 @@
         <div class="xl:grid xl:grid-flow-col auto-cols-max gap-x-[11px] gap-y-2 justify-center max-2xl:place-content-end" id="c4">
             <div class="row-span-2">
                 <div class="relative xl:w-[400px] xl:h-[611px] 2xl:w-[547px] 2xl:h-[611px] group cursor-pointer" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                        <!-- <img src="images/commecial-channel-img-1.webp" alt="" width="546" height="611" class="block w-full h-full object-cover" loading="lazy"> -->
                     <img src="images/cci-img-xs-1.webp" alt="" title="" width="355" height="198" class="block md:hidden drop-shadow-[0_0_4px_rgba(0,0,0,0.1)]" loading="lazy">
                     <video width="100%" height="602" class="vid-radius hidden md:block" autoplay loop muted>
                         <source src="vid/vid_2.mp4" type="video/mp4">
+                        <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
                     </video>
                     <div class="absolute bottom-5 left-4 hidden md:block">
                         <h5 class="text-white text-sm md:text-base font-medium leading-none pb-2.5">Customer Relationship Program</h5>
@@ -1211,7 +1090,6 @@
                         <p class="text-white text-sm font-normal leading-tight hidden md:block">Pragati is a customer relationship program which focuses on both customer engagement and customer retention.</p>
                     </div>
                     <a href="#" class="sprite w-9 h-9 block icon-instagram absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-2.5 right-4"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1248,7 +1126,6 @@
                     <img src="images/cci-img-xs-1.webp" alt="" title="" width="250" height="208" class="block md:hidden">
                     <h5 class="absolute max-sm:bottom-20 bottom-4 left-4 text-white text-sm md:leading-none md:text-base font-medium leading-none">Lorem Ipsum </h5>
                     <a href="#" class="sprite w-9 h-9 block icon-twitter absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-4 right-4 z-10"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1277,7 +1154,6 @@
                     <p class="text-sm font-regular leading-tight text-black block text-center md:hidden">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus lorem vulputate
                     </p>
-                    <!-- <a href="" class="text-sm font-regular leading-none text-[#0466f9] underline md:hidden">Explore</a> -->
                 </div>
                 <div class="relative mt-6 group cursor-pointer mb-5 xl:hidden">
                     <img src="images/cci-img-xs-2.webp" alt="" title="" width="355" height="198" class="block md:hidden drop-shadow-[0_0_4px_rgba(0,0,0,0.1)]">
@@ -1286,7 +1162,6 @@
                         <p class="text-white text-sm font-normal leading-tight hidden md:block">Pragati is a customer relationship program which focuses on both customer engagement and customer retention.</p>
                     </div>
                     <a href="#" class="sprite w-9 h-9 block icon-fb absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-2.5 right-4 z-10"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1323,7 +1198,6 @@
                     <img src="images/cci-img-xs-1.webp" alt="" title="" width="250" height="208" class="block md:hidden">
                     <h5 class="absolute max-sm:bottom-20 bottom-4 left-4 text-white text-sm md:leading-none md:text-base font-medium leading-none">Lorem Ipsum </h5>
                     <a href="#" class="sprite w-9 h-9 block icon-youtube absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-4 right-4 z-10"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1352,7 +1226,6 @@
                     <p class="text-sm font-regular leading-tight text-black block text-center md:hidden">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus lorem vulputate
                     </p>
-                    <!-- <a href="" class="text-sm font-regular leading-none text-[#0466f9] underline md:hidden">Explore</a> -->
                 </div>
                 <div class="relative mt-6 group cursor-pointer mb-5 xl:hidden">
                     <img src="images/cci-img-xs-2.webp" alt="" title="" width="355" height="198" class="block md:hidden drop-shadow-[0_0_4px_rgba(0,0,0,0.1)]">
@@ -1361,7 +1234,6 @@
                         <p class="text-white text-sm font-normal leading-tight hidden md:block">Pragati is a customer relationship program which focuses on both customer engagement and customer retention.</p>
                     </div>
                     <a href="#" class="sprite w-9 h-9 block icon-fb absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-2.5 right-4 z-10"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1398,7 +1270,6 @@
                     <img src="images/cci-img-xs-1.webp" alt="" title="" width="250" height="208" class="block md:hidden">
                     <h5 class="absolute bottom-4 left-4 text-white text-sm md:leading-none md:text-base font-medium leading-none">Expert choice </h5>
                     <a href="#" class="sprite w-9 h-9 block icon-instagram absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-4 right-4 z-10"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1427,7 +1298,6 @@
                     <p class="text-sm font-regular leading-tight text-black block text-center md:hidden">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus lorem vulputate
                     </p>
-                    <!-- <a href="" class="text-sm font-regular leading-none text-[#0466f9] underline md:hidden">Explore</a> -->
                 </div>
                 <div class="relative mt-6 group cursor-pointer mb-5 xl:hidden">
                     <img src="images/cci-img-xs-2.webp" alt="" title="" width="355" height="198" class="block md:hidden drop-shadow-[0_0_4px_rgba(0,0,0,0.1)]">
@@ -1436,7 +1306,6 @@
                         <p class="text-white text-sm font-normal leading-tight hidden md:block">Pragati is a customer relationship program which focuses on both customer engagement and customer retention.</p>
                     </div>
                     <a href="#" class="sprite w-9 h-9 block icon-fb absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-2.5 right-4"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1473,7 +1342,6 @@
                     <img src="images/cci-img-xs-1.webp" alt="" title="" width="250" height="208" class="block md:hidden">
                     <h5 class="absolute max-sm:bottom-20 bottom-4 left-4 text-white text-sm md:leading-none md:text-base font-medium leading-none">Lorem Ipsum</h5>
                     <a href="#" class="sprite w-9 h-9 block icon-instagram absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-4 right-4 z-10"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1502,7 +1370,6 @@
                     <p class="text-sm font-regular leading-tight text-black block text-center md:hidden">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus lorem vulputate
                     </p>
-                    <!-- <a href="" class="text-sm font-regular leading-none text-[#0466f9] underline md:hidden">Explore</a> -->
                 </div>
                 <div class="relative mt-6 group cursor-pointer mb-5 xl:hidden">
                     <img src="images/cci-img-xs-2.webp" alt="" title="" width="355" height="198" class="block md:hidden drop-shadow-[0_0_4px_rgba(0,0,0,0.1)]">
@@ -1511,7 +1378,6 @@
                         <p class="text-white text-sm font-normal leading-tight hidden md:block">Pragati is a customer relationship program which focuses on both customer engagement and customer retention.</p>
                     </div>
                     <a href="#" class="sprite w-9 h-9 block icon-fb absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-2.5 right-4 z-10"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1548,7 +1414,6 @@
                     <img src="images/cci-img-xs-1.webp" alt="" title="" width="250" height="208" class="block md:hidden">
                     <h5 class="absolute max-sm:bottom-20 bottom-4 left-4 text-white text-sm md:leading-none md:text-base font-medium leading-none">Lorem ipsum</h5>
                     <a href="#" class="sprite w-9 h-9 block icon-instagram absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-4 right-4 z-10"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1577,7 +1442,6 @@
                     <p class="text-sm font-regular leading-tight text-black block text-center md:hidden">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus lorem vulputate
                     </p>
-                    <!-- <a href="" class="text-sm font-regular leading-none text-[#0466f9] underline md:hidden">Explore</a> -->
                 </div>
                 <div class="relative mt-6 group cursor-pointer mb-5 xl:hidden">
                     <img src="images/cci-img-xs-2.webp" alt="" title="" width="355" height="198" class="block md:hidden drop-shadow-[0_0_4px_rgba(0,0,0,0.1)]">
@@ -1586,7 +1450,6 @@
                         <p class="text-white text-sm font-normal leading-tight hidden md:block">Pragati is a customer relationship program which focuses on both customer engagement and customer retention.</p>
                     </div>
                     <a href="#" class="sprite w-9 h-9 block icon-fb absolute top-3.5 left-2.5 max-sm:left-4"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-2.5 right-4"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1623,7 +1486,6 @@
                     <img src="images/cci-img-xs-1.webp" alt="" title="" width="250" height="208" class="block md:hidden">
                     <h5 class="absolute max-sm:bottom-20 bottom-4 left-4 text-white text-base font-medium leading-none">Lorem ipsum</h5>
                     <a href="#" class="sprite w-9 h-9 block icon-instagram absolute top-3.5 left-2.5 max-sm:left-4 hover:drop-shadow-[0_0px_6px_rgba(0,0,0,0.15)]"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-4 right-4 z-10"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1652,7 +1514,6 @@
                     <p class="text-sm font-regular leading-tight text-black block text-center md:hidden">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus lorem vulputate
                     </p>
-                    <!-- <a href="" class="text-sm font-regular leading-none text-[#0466f9] underline md:hidden">Explore</a> -->
                 </div>
                 <div class="relative mt-6 group cursor-pointer mb-5 xl:hidden">
                     <img src="images/cci-img-xs-2.webp" alt="" title="" width="355" height="198" class="block md:hidden drop-shadow-[0_0_4px_rgba(0,0,0,0.1)]">
@@ -1661,7 +1522,6 @@
                         <p class="text-white text-sm font-normal leading-tight hidden md:block">Pragati is a customer relationship program which focuses on both customer engagement and customer retention.</p>
                     </div>
                     <a href="#" class="sprite w-9 h-9 block icon-fb absolute top-3.5 left-2.5 max-sm:left-4"></a>
-                    <!-- <a href="#" class="sprite w-[21px] h-5 block icon-share absolute max-sm:bottom-[78px] bottom-2.5 right-4"></a> -->
                     <div class="shareMenu absolute max-sm:bottom-[78px] bottom-5 right-4 z-10">
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
@@ -1703,32 +1563,44 @@
                 <div class="w-full max-2xl:max-w-[900px] 2xl:max-w-[860px] block mx-auto px-3.5 pt-12 md:px-0 md:pt-0 relative">
                     <h2 class="text-22 md:text-3xl font-bold text-center text-black uppercase absolute -top-4 xl:-top-11 left-1/2 -translate-x-1/2 bg-white px-3 max-sm:whitespace-nowrap">Enquire now</h2>
                     <p class="text-lg font-medium text-center text-black pb-12 hidden md:block">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-                    <div class="grid xl:grid-cols-3 gap-x-9 gap-y-5">
+                    <div class="grid xl:grid-cols-3 gap-x-9 gap-y-5 max-sm:gap-y-3">
                         <div class="block">
                             <input type="text" class="block w-full border border-[#dbdbdb] px-5 xl:border-[#ddd] 
-                            xl:px-[15px] py-[22px] md:py-4 rounded xl:rounded-[5px] 
-                            drop-shadow-none max-sm:placeholder:text-lg placeholder:text-sm placeholder:font-normal
+                            xl:px-[15px] py-[15px] md:py-4 rounded xl:rounded-[5px] 
+                            drop-shadow-none max-sm:placeholder:text-sm placeholder:text-sm placeholder:font-normal
                             placeholder:text-[#757575] focus:border-primary focus:ring-primary" placeholder="Name*">
                         </div>
-                        <div class="block relative">
-                            <input type="text" class="block w-full border border-[#dbdbdb] xl:border-[#ddd] 
-                            xl:px-[15px] py-[22px] md:py-4 rounded xl:rounded-[5px] 
-                            drop-shadow-none max-sm:placeholder:text-lg placeholder:text-sm placeholder:font-normal
-                            placeholder:text-[#757575] focus:border-primary focus:ring-primary" placeholder="Mobile Number*">
-                            <a href="javascript:void(0)" class="text-sm uppercase text-primary absolute right-4 top-1/2 -translate-y-1/2 font-medium">Send Otp</a>
+                        <div class="mobile-otp">
+                            <div class="block relative">
+                                <input type="text" class="block w-full border border-[#dbdbdb] xl:border-[#ddd] 
+                                xl:px-[15px] py-[15px] md:py-4 rounded xl:rounded-[5px] 
+                                drop-shadow-none max-sm:placeholder:text-sm placeholder:text-sm placeholder:font-normal
+                                placeholder:text-[#757575] focus:border-primary focus:ring-primary" placeholder="Mobile Number*">
+                                <a href="javascript:void(0)" class="text-sm uppercase text-primary absolute right-4 top-1/2 -translate-y-1/2 font-medium send-otp">Send Otp</a>
+                            </div>
+                            <p class="text-red-500 text-xs font-medium error hidden">Invalid OTP</p>
                         </div>
+
+                        <div class="registered-otp hidden">
+                            <div class="block relative">
+                                <input type="text" class="block w-full border border-[#dbdbdb] xl:border-[#ddd] 
+                                xl:px-[15px] py-[15px] md:py-4 rounded xl:rounded-[5px] 
+                                drop-shadow-none max-sm:placeholder:text-sm placeholder:text-sm placeholder:font-normal
+                                placeholder:text-[#757575] focus:border-primary focus:ring-primary" placeholder="Enter OTP*">
+                                <a href="javascript:void(0)" class="text-sm uppercase text-primary absolute right-4 top-1/2 -translate-y-1/2 font-medium verify-otp">Verify</a>
+                            </div>
+                            <div class="flex items-center !mt-2">
+                                <a href="javascript:void(0)" class="text-sm text-primary font-medium change-mobile-no">Change Mobile No.</a>
+                                <a href="javascript:void(0)" class="text-sm text-primary font-medium ml-auto">Resend</a>
+                            </div>
+                        </div>
+
                         <div class="block">
                             <input type="text" class="block w-full border border-[#dbdbdb] xl:border-[#ddd] 
-                            xl:px-[15px] py-[22px] md:py-4 rounded xl:rounded-[5px] 
-                            drop-shadow-none max-sm:placeholder:text-lg placeholder:text-sm placeholder:font-normal
+                            xl:px-[15px] py-[15px] md:py-4 rounded xl:rounded-[5px] 
+                            drop-shadow-none max-sm:placeholder:text-sm placeholder:text-sm placeholder:font-normal
                             placeholder:text-[#757575] focus:border-primary focus:ring-primary" placeholder="Vehicle*">
                         </div>
-                        <!-- <div class="block">
-                            <input type="text" class="block w-full border border-[#dbdbdb] xl:border-[#ddd] 
-                            xl:px-[15px] py-[22px] md:py-4 rounded xl:rounded-[5px] 
-                            drop-shadow-none max-sm:placeholder:text-lg placeholder:text-sm placeholder:font-normal
-                            placeholder:text-[#757575] focus:border-primary focus:ring-primary" placeholder="OTP*">
-                        </div> -->
                     </div>
                     <label class="flex items-start xl:hidden mt-4">
                         <input type="checkbox" class="
@@ -1744,7 +1616,7 @@
                             mt-1
                             rounded-sm
                         " checked="">
-                        <span class="ml-2 text-sm text-[#808080] font-normal leading-relaxed">I agree that by clicking the ‘Continue’ button below, I am explicitly soliciting a call from Maruti Suzuki India Ltd. Or its partners on my ‘Mobile’.</span>
+                        <span class="ml-2 text-xs text-[#808080] font-normal leading-relaxed">I agree that by clicking the ‘Continue’ button below, I am explicitly soliciting a call from Maruti Suzuki India Ltd. Or its partners on my ‘Mobile’.</span>
                     </label>
                     <label class="md:flex items-start hidden mt-5">
                         <input type="checkbox" class="
@@ -1777,18 +1649,6 @@
     <section class="sec-08 xl:bg-[url('../images/quick-action-img.webp')] bg-no-repeat bg-top md:bg-center sec-08car xl:-mt-[79px]" id="tt">
         <img src="images/taxi.webp" alt="" width="393" height="613" loading="lazy" class="w-full xl:hidden">
         <div class="car w-full md:w-[580px] mx-auto hidden xl:block">
-            <!-- <div class="car-in">
-                <img src="images/car_img.webp" alt="">
-                <div class="front-wheel">
-                    <img src="images/front_wheel.webp" alt="">
-                </div>
-                <div class="back-wheel">
-                    <img src="images/back_wheel.webp" alt="">
-                </div>
-                <div class="car-parallax">
-                    <img src="images/car_img-reflect.webp" alt="">
-                </div>
-            </div> -->
             <div class="car-view">
                 <div class="img-car-moving">
                     <div class="relative">
@@ -1796,18 +1656,10 @@
                         <img class="front-wheel " src="images/front_wheel.webp" alt="" loading="lazy">
                         <img class="back-wheel" src="images/back_wheel.webp" alt="" loading="lazy">
                     </div>
-
-                    <!-- <div class="car-parallax">
-                        <img src="images/car_img-reflect.webp" alt="" width="643" height="319" loading="lazy">
-                    </div> -->
                 </div>
-
-
               </div>
-
         </div>
         <div class="container max-w-[1180px] mx-auto relative">
-            <!-- <img src="images/quick-action-text-img.webp" alt="" title="" class="max-sm:hidden block qa-space mx-auto"> -->
             <img src="images/quick-action-text-img-mob.webp" alt="" title="" width="273" height="98" class="block mx-auto xl:hidden" loading="lazy">
             <h2 class="text-6xl md:text-[133px] text-black/[0.05] uppercase font-gb leading-none text-center qa-space max-sm:hidden">Quick Actions</h2>
             <div class="grid xl:grid-cols-4 space-y-2.5 md:space-y-0 md:space-x-2 pb-7 md:pb-[75px] -mt-[3] xl:mt-[-19px] px-5 md:px-0">
@@ -1889,11 +1741,6 @@
                         fill="#3A3A3A" />
                 </svg>
             </a>
-                
-            <!-- <a href="#" class="sprite ico-twt block mr-5 md:mr-6"></a>
-            <a href="#" class="sprite ico-fb block mr-5 md:mr-6"></a>
-            <a href="#" class="sprite ico-insta block mr-5"></a>
-            <a href="#" class="sprite ico-utube"></a> -->
         </div>
     </div>
 
@@ -1933,11 +1780,6 @@
                                 fill="white" />
                         </svg>
                     </a>
-                        
-                    <!-- <a href="#" class="sprite ico-twt block mr-5 md:mr-6"></a>
-                    <a href="#" class="sprite ico-fb block mr-5 md:mr-6"></a>
-                    <a href="#" class="sprite ico-insta block mr-5"></a>
-                    <a href="#" class="sprite ico-utube"></a> -->
                 </div>
             </div>
             <div class="max-sm:border-b max-sm:border-[#333] max-sm:pb-9 pt-9 pb-3 md:pt-7 md:pb-6 pl-12 block md:hidden">
@@ -1951,15 +1793,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="flex pt-3 pb-9 md:pt-7 md:pb-6 pl-12 border-b border-[#2e2d2c] hidden">
-                <div class="w-[42px] h-[42px] md:w-[53px] md:h-[53px] bg-white rounded-full flex items-center justify-center">
-                    <i class="sprite icon-msg"></i>
-                </div>
-                <div class="ml-5 md:ml-10">
-                    <span class="block font-montserrat text-xs font-normal leading-none pb-1">Say Hello</span>
-                    <a href="mailto:contact@maruti.co.in" class="block font-montserrat text-xs font-medium leading-none hover:text-white/[0.6]">contact@maruti.co.in</a>
-                </div>
-            </div> -->
             <div class="md:grid grid-cols-1 xl:grid-cols-4 md:pl-12 xl:pt-14 xl:pb-7">
                 <div class="max-sm:border-b xl:border-r border-[#333] max-sm:py-4 max-sm:px-5 xl:pr-12">
                     <h5 class="max-sm:text-lg text-base font-bold leading-none xl:pb-6 max-sm:flex max-sm:items-center f-accordion-item">About Us <i class="fm-arrow bg-footer-nav-arrow"></i></h5>
@@ -2020,23 +1853,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="md:flex pt-7 pb-6 pl-12 border-b border-[#2e2d2c] hidden">
-                <div class="w-[53px] h-[53px] bg-white rounded-full flex items-center justify-center">
-                    <i class="sprite icon-msg"></i>
-                </div>
-                <div class="ml-10">
-                    <span class="block font-montserrat text-sm font-normal leading-none pb-2.5">Say Hello</span>
-                    <a href="mailto:contact@maruti.co.in" class="block font-montserrat text-sm font-medium leading-none hover:text-white/[0.6]">contact@maruti.co.in</a>
-                </div>
-            </div> -->
-            <!-- <div class="pl-7 md:pl-12 pt-5 md:pt-14">
-                <p class="block text-xs md:text-sm font-normal leading-none pb-2">Newsletter</p>
-                <h6 class="block text-xs md:text-base font-bold leading-none md:leading-7 pb-4 md:pb-6">Get the latest news about <br class="hidden md:block"> Maruti Suzuki Commercial</h6>
-                <div class="relative">
-                    <input type="text" class="text-white p-3 bg-[#181818] border-[#181818] w-full max-w-xs" placeholder="Hello@gmail.com">
-                    <button type="button" class="absolute"> <i class="sprite "></i> </button>
-                </div>
-            </div> -->
             <div class="pt-12 pl-8 pr-12 border-t border-[#2e2d2c] py-5 hidden md:block">
                 <p class="text-xs font-normal leading-relaxed pb-6">
                     *The content and information available on this website is limited to the sales and services offered by 
@@ -2082,17 +1898,10 @@
         </a>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <!-- <script src="scripts/jquery.mousewheel.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- <script src="scripts/swipe-carousel.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!-- <script type="text/javascript" src="//unpkg.com/default-passive-events"></script> -->
     <script src="scripts/threesixty.js"></script>
-    <!-- <script src="scripts/sly.min.js"></script> -->
-    <!-- <script src="scripts/aos.js" async></script> -->
-    <!-- <script src="scripts/owl.carousel.min.js" async></script> -->
-    
     <script src="scripts/common.js"></script>
 </body>
 </html>
