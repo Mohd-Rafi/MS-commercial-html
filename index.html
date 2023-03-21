@@ -7,10 +7,9 @@
     <title>Maruti Suzuki Commercial - Home Page</title>
     <link rel="icon" href="images/favicon.webp" type="image/webp" />
     <link rel="stylesheet" href="styles/output.css">
-    <link rel="stylesheet" href="styles/owl.carousel.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" defer />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" integrity="sha512-N2IsWuKsBYYiHNYdaEuK4eaRJ0onfUG+cdZilndYaMEhUGQq/McsFU75q3N+jbJUNXm6O+K52DRrK+bSpBGj0w==" crossorigin="anonymous" referrerpolicy="no-referrer" defer />
 </head>
 <body>
     <header>
@@ -20,8 +19,8 @@
                       <img src="images/logo.webp" alt="" title="" width="320" height="22" class="hidden xl:block">
                       <img src="images/logo-xs.webp" alt="" title="" width="284" height="20" class="block xl:hidden logo-xs-360">
                     </div>
-                    <nav class="ml-auto hidden xl:block" role="Topmenu" aria-labelledby="nav1">
-                        <ul class="flex space-x-2.5 2xl:space-x-7 list-none">
+                    <nav class="ml-auto hidden xl:block" role="navigation" aria-labelledby="nav1">
+                        <ul class="flex space-x-4 2xl:space-x-7 list-none" id="nav1">
                             <li class="drp-menu py-[22px]">
                                 <a href="#" class="text-black text-sm 2xl:text-[15px] font-medium hover:text-primary relative after:absolute 
                                 after:w-0 after:left-1/2 after:h-0.5 after:bg-primary after:bottom-[-5px] after:ease-in after:duration-300 hover:after:w-full 
@@ -201,8 +200,8 @@
             </div>
     </header>
     <!-- mobile menu -->
-    <nav class="mobile-nav fixed w-full h-full inset-0 z-10 hidden" role="Secondnavigation" aria-labelledby="nav2">
-        <ul class="px-5 bg-white mobile-nav-block">
+    <nav class="mobile-nav fixed w-full h-full inset-0 z-10 hidden" role="navigation" aria-labelledby="nav2">
+        <ul class="px-5 bg-white mobile-nav-block" id="nav2">
             <li><a href="#" class="text-base text-black font-medium leading-none block border-b border-[#E7E7E7] py-6">Home</a></li>
             <li><a href="#" class="text-base text-black font-medium leading-none block border-b border-[#E7E7E7] py-6">Vehicles</a></li>
             <li><a href="#" class="text-base text-black font-medium leading-none block border-b border-[#E7E7E7] py-6">About Us</a></li>
@@ -220,7 +219,7 @@
         <div class="js-carousel-1 owl-carousel">
             <div class="item">
                 <div class="video-banner">
-                    <video width="100%" height="300" autoplay loop muted playsinline poster="images/banner-poster.webp">
+                    <video autoplay loop muted playsinline poster="images/banner-poster.webp">
                         <source src="vid/banner.mp4" type="video/mp4">
                         <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
                     </video>
@@ -247,7 +246,7 @@
             </div>
             <div class="item">
                 <div class="video-banner">
-                    <video width="100%" height="300" autoplay loop muted playsinline poster="images/banner-poster.webp">
+                    <video autoplay loop muted playsinline poster="images/banner-poster.webp">
                         <source src="vid/banner.mp4" type="video/mp4">
                         <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
                     </video>
@@ -392,200 +391,380 @@
         <div class="container mx-auto">
             <h1 class="text-center text-black text-2xl md:text-3xl font-bold uppercase leading-none max-sm:pb-5 pt-20 xl:pt-14 xl:pb-2">vehicle range</h1>
             <div class="tabs text-center flex gap-x-2.5 justify-center max-sm:mb-[60px] xl:mb-6 space-x-1.5 xl:pt-2.5">
-                <a href="#tab-1" class="2xl:min-w-[141px] max-sm:text-base text-xl font-medium 
-                text-black max-sm:!leading-[0.6] leading-none py-[11px] xl:py-2 px-1.5 relative 
-                rounded-none hover:!text-primary hover:font-bold hover:after:absolute 
-                hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:bg-[url('../images/sprite.webp')] 
-                hover:after:w-[22px] hover:after:h-2 
-                hover:after:bg-left-top[-269px-289px] 
-                hover:after:bottom-[-10px] 
-                tab-active ease-in duration-300 kp_btn
-                2xl:w-[141px] h-10
-
-                ">
-                Goods Carrier
-                <svg width="145" height="40" viewBox="0 0 145 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.782 2H139.218C140.322 2 141.218 2.895 141.218 4V33.1C141.218 35.105 140.322 35.1 139.218 35.1H4.782C3.678 35.1 2.782 35.105 2.782 33.1V4C2.782 2.895 3.678 2 4.782 2Z" stroke="#DA251D" stroke-width="2"/>
+                <a href="#tab-1" class="tabs-item kp_btn tab-active">
+                    Goods Carrier
+                    <svg width="145" height="40" viewBox="0 0 145 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.782 2H139.218C140.322 2 141.218 2.895 141.218 4V33.1C141.218 35.105 140.322 35.1 139.218 35.1H4.782C3.678 35.1 2.782 35.105 2.782 33.1V4C2.782 2.895 3.678 2 4.782 2Z" stroke="#DA251D" stroke-width="2"/>
+                        </svg>
+                </a>
+                <a href="#tab-2" class="tabs-item kp_btn">
+                Passenger Carrier
+                    <svg width="182" height="40" viewBox="0 0 182 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.10001 1.10001H176.1C178.105 1.10001 178.1 2.89501 178.1 3.10001V33.1C178.1 35.104 178.105 35.1 176.1 35.1H3.10001C2.89501 35.1 1.10001 35.104 1.10001 33.1V3.10001C1.10001 2.89501 2.89501 1.10001 3.10001 1.10001Z" stroke="#DA251D" stroke-width="2"/>
                     </svg>
-            </a>
-            <a href="#tab-2" class="2xl:min-w-[141px] max-sm:text-base text-xl font-medium 
-            text-black max-sm:!leading-[0.6] leading-none py-[11px] xl:py-2 px-1.5 
-            relative 
-            rounded-none hover:!text-primary hover:font-bold hover:after:absolute 
-            hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:bg-[url('../images/sprite.webp')] 
-            hover:after:w-[22px] hover:after:h-2 
-            hover:after:bg-left-top[-269px-289px] 
-            hover:after:bottom-[-10px] 
-            ease-in duration-300 kp_btn 2xl:w-[180px] h-10
-
-            ">
-            Passenger Carrier
-                <svg width="182" height="40" viewBox="0 0 182 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.10001 1.10001H176.1C178.105 1.10001 178.1 2.89501 178.1 3.10001V33.1C178.1 35.104 178.105 35.1 176.1 35.1H3.10001C2.89501 35.1 1.10001 35.104 1.10001 33.1V3.10001C1.10001 2.89501 2.89501 1.10001 3.10001 1.10001Z" stroke="#DA251D" stroke-width="2"/>
-                </svg>
-            </a>
+                </a>
             </div>
 
         </div>
         <div class="tab-content w-full">
             <div class="tab-pane relative" id="tab-1">
-                <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center">
-                    <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
-                        <div class="flex-shrink-0">
-                            <i class="sprite w-[33px] h-[33px] md:w-[44px] md:h-[44px] engine-ico-1 block"></i>
-                        </div>
-                        <div class="ml-3 xl:ml-3 xl:flex-1 max-sm:max-w-[121px]">
-                            <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Starting from</p>
-                            <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none flex">₹ <span class="digit-start">5 93 000*</span></div>
-                        </div>
-                    </div>
-                    <div class="hidden xl:block">
-                        <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
-                    </div>
-                    <div class="flex flex-initial items-center max-sm:row-start-2 xl:mx-4 max-sm:basis-2/5">
-                        <div class="flex-shrink-0">
-                            <i class="sprite w-[36px] h-[29px] md:w-[45px] md:h-[33px] engine-ico-2 block"></i>
-                        </div>
-                        <div class="ml-2.5 xl:ml-3 xl:flex-1 xl:min-w-[95px]">
-                            <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Engine</p>
-                            <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none">
-                                <span class="digit-cc">1196</span>cc</div>
-                        </div>
-                    </div>
-                    <div class="ml-4 hidden xl:block">
-                        <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
-                    </div>
-                    <div class="flex flex-initial items-center  max-sm:row-start-2 max-sm:justify-end
-                    max-sm:relative max-sm:basis-2/5 dvd-xs">
-                        <div class="flex-shrink-0">
-                            <i class="sprite w-[36px] h-[36px] md:w-[44px] md:h-[44px] engine-ico-3 block"></i>
-                        </div>
-                        <div class="ml-1.5 xl:ml-3 xl:flex-1">
-                            <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Variant</p>
-                            <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none whitespace-nowrap">Petrol / CNG</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel 
-                max-sm:relative
-                max-sm:after:absolute
-                max-sm:after:left-0
-                max-sm:after:right-0
-                max-sm:after:bottom-0
-                max-sm:after:w-full
-                max-sm:after:h-[83px]
-                max-sm:after:bg-[url('../images/circle-line.webp')]
-                max-sm:after:bg-no-repeat
-                max-sm:after:bg-cover
-                max-sm:h-[187px]
-                max-sm:mt-[50px]
-                
-                ">
+                <div class="carousel">
                 <div class="carousel-wrap">
                     <div class="owl-carousel" id="c3">
                         <div class="item xl:w-[625px] 2xl:w-[741px] mx-auto">
+                            <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center feature-tab">
+                                <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[33px] h-[33px] md:w-[44px] md:h-[44px] engine-ico-1 block"></i>
+                                    </div>
+                                    <div class="ml-3 xl:ml-3 xl:flex-1 max-sm:max-w-[121px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Starting from</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none flex">₹ <span class="digit-start">5 93 000*</span></div>
+                                    </div>
+                                </div>
+                                <div class="hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center max-sm:row-start-2 xl:mx-4 max-sm:basis-2/5">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[29px] md:w-[45px] md:h-[33px] engine-ico-2 block"></i>
+                                    </div>
+                                    <div class="ml-2.5 xl:ml-3 xl:flex-1 xl:min-w-[95px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Engine</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none">
+                                            <span class="digit-cc">1196</span>cc</div>
+                                    </div>
+                                </div>
+                                <div class="ml-4 hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center  max-sm:row-start-2 max-sm:justify-end
+                                max-sm:relative max-sm:basis-2/5 dvd-xs">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[36px] md:w-[44px] md:h-[44px] engine-ico-3 block"></i>
+                                    </div>
+                                    <div class="ml-1.5 xl:ml-3 xl:flex-1">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Variant</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none whitespace-nowrap">Petrol / CNG</div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
-                        </div>
-                        <div class="item  xl:w-[625px] 2xl:w-[741px] mx-auto">
-                            <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
+                            <div class="carousel-btn360">
+                                <a href="javascript:void(0)" class="btn-360">
+                                    <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="hidden md:block drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
+                                    <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="carousel-btn-360-xs">
+                                </a>
+                                <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
+                            </div>
+                            <div class="flex justify-center pb-24 xl:pb-4 space-x-4 xl:items-center carousel-button">
+                                <a href="#" class="xl:font-gm btn bg-primary px-4 py-3.5 md:px-7 md:py-3.5 text-white text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[118px] text-center
+                                border border-primary hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300">Explore</a>
+                                <a href="#" class="xl:font-gm btn border border-primary bg-transparent px-4 py-3.5 md:px-7 md:py-3.5 text-primary text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[172px] text-center
+                                border border-primary hover:bg-primary hover:text-white hover:border-primary ease-in duration-300">Calculate EMI</a>
+                            </div>
                         </div>
                         <div class="item xl:w-[625px] 2xl:w-[741px] mx-auto">
+                            <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center feature-tab">
+                                <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[33px] h-[33px] md:w-[44px] md:h-[44px] engine-ico-1 block"></i>
+                                    </div>
+                                    <div class="ml-3 xl:ml-3 xl:flex-1 max-sm:max-w-[121px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Starting from</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none flex">₹ <span class="digit-start">5 93 000*</span></div>
+                                    </div>
+                                </div>
+                                <div class="hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center max-sm:row-start-2 xl:mx-4 max-sm:basis-2/5">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[29px] md:w-[45px] md:h-[33px] engine-ico-2 block"></i>
+                                    </div>
+                                    <div class="ml-2.5 xl:ml-3 xl:flex-1 xl:min-w-[95px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Engine</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none">
+                                            <span class="digit-cc">1196</span>cc</div>
+                                    </div>
+                                </div>
+                                <div class="ml-4 hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center  max-sm:row-start-2 max-sm:justify-end
+                                max-sm:relative max-sm:basis-2/5 dvd-xs">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[36px] md:w-[44px] md:h-[44px] engine-ico-3 block"></i>
+                                    </div>
+                                    <div class="ml-1.5 xl:ml-3 xl:flex-1">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Variant</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none whitespace-nowrap">Petrol / CNG</div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
+                            <div class="">
+                                <a href="javascript:void(0)" class="btn-360">
+                                    <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="hidden md:block drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
+                                    <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy" class="!hidden close-icon">
+                                    <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="carousel-btn-360-xs">
+                                </a>
+                                <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
+                            </div>
+                            <div class="flex justify-center pb-24 xl:pb-4 space-x-4 xl:items-center carousel-button">
+                                <a href="#" class="xl:font-gm btn bg-primary px-4 py-3.5 md:px-7 md:py-3.5 text-white text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[118px] text-center
+                                border border-primary hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300">Explore</a>
+                                <a href="#" class="xl:font-gm btn border border-primary bg-transparent px-4 py-3.5 md:px-7 md:py-3.5 text-primary text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[172px] text-center
+                                border border-primary hover:bg-primary hover:text-white hover:border-primary ease-in duration-300">Calculate EMI</a>
+                            </div>
+                        </div>
+                        <div class="item xl:w-[625px] 2xl:w-[741px] mx-auto">
+                            <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center feature-tab">
+                                <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[33px] h-[33px] md:w-[44px] md:h-[44px] engine-ico-1 block"></i>
+                                    </div>
+                                    <div class="ml-3 xl:ml-3 xl:flex-1 max-sm:max-w-[121px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Starting from</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none flex">₹ <span class="digit-start">5 93 000*</span></div>
+                                    </div>
+                                </div>
+                                <div class="hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center max-sm:row-start-2 xl:mx-4 max-sm:basis-2/5">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[29px] md:w-[45px] md:h-[33px] engine-ico-2 block"></i>
+                                    </div>
+                                    <div class="ml-2.5 xl:ml-3 xl:flex-1 xl:min-w-[95px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Engine</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none">
+                                            <span class="digit-cc">1196</span>cc</div>
+                                    </div>
+                                </div>
+                                <div class="ml-4 hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center  max-sm:row-start-2 max-sm:justify-end
+                                max-sm:relative max-sm:basis-2/5 dvd-xs">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[36px] md:w-[44px] md:h-[44px] engine-ico-3 block"></i>
+                                    </div>
+                                    <div class="ml-1.5 xl:ml-3 xl:flex-1">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Variant</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none whitespace-nowrap">Petrol / CNG</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
+                            <div class="">
+                                <a href="javascript:void(0)" class="btn-360">
+                                    <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
+                                    <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy" class="!hidden close-icon">
+                                    <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="carousel-btn-360-xs">
+                                </a>
+                                <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
+                            </div>
+                            <div class="flex justify-center pb-24 xl:pb-4 space-x-4 xl:items-center carousel-button">
+                                <a href="#" class="xl:font-gm btn bg-primary px-4 py-3.5 md:px-7 md:py-3.5 text-white text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[118px] text-center
+                                border border-primary hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300">Explore</a>
+                                <a href="#" class="xl:font-gm btn border border-primary bg-transparent px-4 py-3.5 md:px-7 md:py-3.5 text-primary text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[172px] text-center
+                                border border-primary hover:bg-primary hover:text-white hover:border-primary ease-in duration-300">Calculate EMI</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                    <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" 
-                    class="block mx-auto md:hidden btn-360-xs-mob 
-                    max-sm:absolute
-                    max-sm:left-1/2
-                    max-sm:-translate-x-1/2
-                    max-sm:-bottom-[76px]
-                    ">
                 </div>
-                <div id="threesixty" class=" w-full h-full hidden"></div>
-                <div class="">
-                    <a href="javascript:void(0)" class="w-full max-w-[155px] md:max-w-[76px] absolute left-1/2 -translate-x-1/2 bottom-[100px] xl:bottom-[144px] z-10 btn-360">
-                        <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="hidden md:block drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
-                        <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy" class="hidden close-icon">
-                        <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="hidden">
+                <div class="threesixty-block hidden">
+                    <div id="threesixty" class=" w-full h-full"></div>
+                    <a href="javascript:void(0)" class="close-icon">
+                        <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy">
                     </a>
-                    <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
-                </div>
-                <div class="flex justify-center pb-24 xl:pb-4 space-x-4 xl:items-center">
-                    <a href="#" class="xl:font-gm btn bg-primary px-4 py-3.5 md:px-7 md:py-3.5 text-white text-sm md:text-base 
-                    md:leading-none font-medium rounded-md block w-full max-w-[118px] text-center
-                    border border-primary hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300">Explore</a>
-                    <a href="#" class="xl:font-gm btn border border-primary bg-transparent px-4 py-3.5 md:px-7 md:py-3.5 text-primary text-sm md:text-base 
-                    md:leading-none font-medium rounded-md block w-full max-w-[172px] text-center
-                    border border-primary hover:bg-primary hover:text-white hover:border-primary ease-in duration-300">Calculate EMI</a>
                 </div>
             </div>
 
             <div class="tab-pane relative" id="tab-2">
-                <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center">
-                    <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
-                        <div class="flex-shrink-0">
-                            <i class="sprite w-[33px] h-[33px] md:w-[44px] md:h-[44px] engine-ico-1 block"></i>
-                        </div>
-                        <div class="ml-3 xl:ml-3 xl:flex-1 max-sm:max-w-[121px]">
-                            <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Starting from</p>
-                            <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none flex">₹ <span class="digit-start">5 93 000*</span></div>
-                        </div>
-                    </div>
-                    <div class="hidden xl:block">
-                        <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
-                    </div>
-                    <div class="flex flex-initial items-center max-sm:row-start-2 xl:mx-4 max-sm:basis-2/5">
-                        <div class="flex-shrink-0">
-                            <i class="sprite w-[36px] h-[29px] md:w-[45px] md:h-[33px] engine-ico-2 block"></i>
-                        </div>
-                        <div class="ml-2.5 xl:ml-3 xl:flex-1 xl:min-w-[95px]">
-                            <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Engine</p>
-                            <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none">
-                                <span class="digit-cc">1196</span>cc</div>
-                        </div>
-                    </div>
-                    <div class="ml-4 hidden xl:block">
-                        <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
-                    </div>
-                    <div class="flex flex-initial items-center  max-sm:row-start-2 max-sm:justify-end
-                    max-sm:relative max-sm:basis-2/5 dvd-xs">
-                        <div class="flex-shrink-0">
-                            <i class="sprite w-[36px] h-[36px] md:w-[44px] md:h-[44px] engine-ico-3 block"></i>
-                        </div>
-                        <div class="ml-1.5 xl:ml-3 xl:flex-1">
-                            <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Variant</p>
-                            <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none whitespace-nowrap">Petrol / CNG</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel 
-                max-sm:relative
-                max-sm:after:absolute
-                max-sm:after:left-0
-                max-sm:after:right-0
-                max-sm:after:bottom-0
-                max-sm:after:w-full
-                max-sm:after:h-[83px]
-                max-sm:after:bg-[url('../images/circle-line.webp')]
-                max-sm:after:bg-no-repeat
-                max-sm:after:bg-cover
-                max-sm:h-[187px]
-                max-sm:mt-[50px]
-                
-                ">
+                <div class="carousel">
                 <div class="carousel-wrap">
-                    <div class="owl-carousel" id="carousel-psgr">
+                    <div class="owl-carousel" id="c3">
                         <div class="item xl:w-[625px] 2xl:w-[741px] mx-auto">
+                            <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center feature-tab">
+                                <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[33px] h-[33px] md:w-[44px] md:h-[44px] engine-ico-1 block"></i>
+                                    </div>
+                                    <div class="ml-3 xl:ml-3 xl:flex-1 max-sm:max-w-[121px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Starting from</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none flex">₹ <span class="digit-start">5 93 000*</span></div>
+                                    </div>
+                                </div>
+                                <div class="hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center max-sm:row-start-2 xl:mx-4 max-sm:basis-2/5">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[29px] md:w-[45px] md:h-[33px] engine-ico-2 block"></i>
+                                    </div>
+                                    <div class="ml-2.5 xl:ml-3 xl:flex-1 xl:min-w-[95px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Engine</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none">
+                                            <span class="digit-cc">1196</span>cc</div>
+                                    </div>
+                                </div>
+                                <div class="ml-4 hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center  max-sm:row-start-2 max-sm:justify-end
+                                max-sm:relative max-sm:basis-2/5 dvd-xs">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[36px] md:w-[44px] md:h-[44px] engine-ico-3 block"></i>
+                                    </div>
+                                    <div class="ml-1.5 xl:ml-3 xl:flex-1">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Variant</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none whitespace-nowrap">Petrol / CNG</div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
-                        </div>
-                        <div class="item  xl:w-[625px] 2xl:w-[741px] mx-auto">
-                            <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
+                            <div class="carousel-btn360">
+                                <a href="javascript:void(0)" class="btn-360">
+                                    <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="hidden md:block drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
+                                    <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="carousel-btn-360-xs">
+                                </a>
+                                <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
+                            </div>
+                            <div class="flex justify-center pb-24 xl:pb-4 space-x-4 xl:items-center carousel-button">
+                                <a href="#" class="xl:font-gm btn bg-primary px-4 py-3.5 md:px-7 md:py-3.5 text-white text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[118px] text-center
+                                border border-primary hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300">Explore</a>
+                                <a href="#" class="xl:font-gm btn border border-primary bg-transparent px-4 py-3.5 md:px-7 md:py-3.5 text-primary text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[172px] text-center
+                                border border-primary hover:bg-primary hover:text-white hover:border-primary ease-in duration-300">Calculate EMI</a>
+                            </div>
                         </div>
                         <div class="item xl:w-[625px] 2xl:w-[741px] mx-auto">
+                            <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center feature-tab">
+                                <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[33px] h-[33px] md:w-[44px] md:h-[44px] engine-ico-1 block"></i>
+                                    </div>
+                                    <div class="ml-3 xl:ml-3 xl:flex-1 max-sm:max-w-[121px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Starting from</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none flex">₹ <span class="digit-start">5 93 000*</span></div>
+                                    </div>
+                                </div>
+                                <div class="hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center max-sm:row-start-2 xl:mx-4 max-sm:basis-2/5">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[29px] md:w-[45px] md:h-[33px] engine-ico-2 block"></i>
+                                    </div>
+                                    <div class="ml-2.5 xl:ml-3 xl:flex-1 xl:min-w-[95px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Engine</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none">
+                                            <span class="digit-cc">1196</span>cc</div>
+                                    </div>
+                                </div>
+                                <div class="ml-4 hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center  max-sm:row-start-2 max-sm:justify-end
+                                max-sm:relative max-sm:basis-2/5 dvd-xs">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[36px] md:w-[44px] md:h-[44px] engine-ico-3 block"></i>
+                                    </div>
+                                    <div class="ml-1.5 xl:ml-3 xl:flex-1">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Variant</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none whitespace-nowrap">Petrol / CNG</div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
+                            <div class="">
+                                <a href="javascript:void(0)" class="btn-360">
+                                    <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="hidden md:block drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
+                                    <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy" class="!hidden close-icon">
+                                    <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="carousel-btn-360-xs">
+                                </a>
+                                <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
+                            </div>
+                            <div class="flex justify-center pb-24 xl:pb-4 space-x-4 xl:items-center carousel-button">
+                                <a href="#" class="xl:font-gm btn bg-primary px-4 py-3.5 md:px-7 md:py-3.5 text-white text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[118px] text-center
+                                border border-primary hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300">Explore</a>
+                                <a href="#" class="xl:font-gm btn border border-primary bg-transparent px-4 py-3.5 md:px-7 md:py-3.5 text-primary text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[172px] text-center
+                                border border-primary hover:bg-primary hover:text-white hover:border-primary ease-in duration-300">Calculate EMI</a>
+                            </div>
+                        </div>
+                        <div class="item xl:w-[625px] 2xl:w-[741px] mx-auto">
+                            <div class="flex max-sm:px-5 md:max-w-full md:max-w-[735px] mx-auto max-sm:flex-wrap max-sm:justify-center feature-tab">
+                                <div class="flex flex-initial items-center tab-pane1 max-sm:row-span-1 max-sm:col-span-2 max-sm:justify-center max-sm:mb-2.5 max-sm:basis-full">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[33px] h-[33px] md:w-[44px] md:h-[44px] engine-ico-1 block"></i>
+                                    </div>
+                                    <div class="ml-3 xl:ml-3 xl:flex-1 max-sm:max-w-[121px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Starting from</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none flex">₹ <span class="digit-start">5 93 000*</span></div>
+                                    </div>
+                                </div>
+                                <div class="hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center max-sm:row-start-2 xl:mx-4 max-sm:basis-2/5">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[29px] md:w-[45px] md:h-[33px] engine-ico-2 block"></i>
+                                    </div>
+                                    <div class="ml-2.5 xl:ml-3 xl:flex-1 xl:min-w-[95px]">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Engine</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none">
+                                            <span class="digit-cc">1196</span>cc</div>
+                                    </div>
+                                </div>
+                                <div class="ml-4 hidden xl:block">
+                                    <img src="images/thumb-shadow.webp" alt="" width="29" height="127">
+                                </div>
+                                <div class="flex flex-initial items-center  max-sm:row-start-2 max-sm:justify-end
+                                max-sm:relative max-sm:basis-2/5 dvd-xs">
+                                    <div class="flex-shrink-0">
+                                        <i class="sprite w-[36px] h-[36px] md:w-[44px] md:h-[44px] engine-ico-3 block"></i>
+                                    </div>
+                                    <div class="ml-1.5 xl:ml-3 xl:flex-1">
+                                        <p class="xl:font-gm text-lg xl:text-sm font-normal text-[#616161] leading-none block pb-0 xl:pb-1.5">Variant</p>
+                                        <div class="xl:font-gb text-xl lg:text-[20px] 2xl:text-[26px] font-bold xl:font-normal text-[#111111] leading-[23px] xl:leading-none whitespace-nowrap">Petrol / CNG</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <img src="images/car-img.webp" alt="" width="852" height="507" loading="lazy">
+                            <div class="">
+                                <a href="javascript:void(0)" class="btn-360">
+                                    <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="hidden md:block drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
+                                    <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy" class="!hidden close-icon">
+                                    <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="carousel-btn-360-xs">
+                                </a>
+                                <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
+                            </div>
+                            <div class="flex justify-center pb-24 xl:pb-4 space-x-4 xl:items-center carousel-button">
+                                <a href="#" class="xl:font-gm btn bg-primary px-4 py-3.5 md:px-7 md:py-3.5 text-white text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[118px] text-center
+                                border border-primary hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300">Explore</a>
+                                <a href="#" class="xl:font-gm btn border border-primary bg-transparent px-4 py-3.5 md:px-7 md:py-3.5 text-primary text-sm md:text-base 
+                                md:leading-none font-medium rounded-md block w-full max-w-[172px] text-center
+                                border border-primary hover:bg-primary hover:text-white hover:border-primary ease-in duration-300">Calculate EMI</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -597,22 +776,11 @@
                     max-sm:-bottom-[76px]
                     ">
                 </div>
-                <div id="threesixty-2" class="w-full h-full hidden mx-auto"></div>
-                <div class="">
-                    <a href="javascript:void(0)" class="w-full max-w-[155px] md:max-w-[76px] absolute left-1/2 -translate-x-1/2 bottom-[100px] xl:bottom-[144px] z-10 btn-360">
-                        <img src="images/btn-360.gif" alt="" width="150" height="150" loading="lazy" class="hidden md:block drop-shadow-[8px_0_73px_rgba(218,37,29,0.76)] view-icon">
-                        <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy" class="hidden close-icon">
-                        <img src="images/btn-360-xs.webp" alt="" width="155" height="155" loading="lazy" class="hidden">
+                <div class="threesixty-block hidden">
+                    <div id="threesixty-2" class=" w-full h-full"></div>
+                    <a href="javascript:void(0)" class="close-icon">
+                        <img src="images/btn-360-close.webp" alt="" width="150" height="150" loading="lazy">
                     </a>
-                    <img src="images/car-logo.webp" alt="" width="157" height="39" class="mx-auto block mt-[100px] xl:mt-11 md:mt-0 mb-5 md:mb-3.5 w-[130px] h-[32px] md:w-[157px] md:h-[39px]" loading="lazy">
-                </div>
-                <div class="flex justify-center pb-24 xl:pb-4 space-x-4 xl:items-center">
-                    <a href="#" class="xl:font-gm btn bg-primary px-4 py-3.5 md:px-7 md:py-3.5 text-white text-sm md:text-base 
-                    md:leading-none font-medium rounded-md block w-full max-w-[118px] text-center
-                    border border-primary hover:bg-transparent hover:text-primary hover:border-primary ease-in duration-300">Explore</a>
-                    <a href="#" class="xl:font-gm btn border border-primary bg-transparent px-4 py-3.5 md:px-7 md:py-3.5 text-primary text-sm md:text-base 
-                    md:leading-none font-medium rounded-md block w-full max-w-[172px] text-center
-                    border border-primary hover:bg-primary hover:text-white hover:border-primary ease-in duration-300">Calculate EMI</a>
                 </div>
             </div>
         </div>
@@ -623,7 +791,7 @@
             <p class="text-sm md:text-base text-black text-center font-normal pb-2 md:pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. incididunt </p>
             <div class="xl:h-[313px] xl:flex">
                 <div class="xl:pl-[17%] max-sm:mb-5">
-                    <video width="100%" height="100%" class="" playsinline autoplay muted>
+                    <video playsinline autoplay muted>
                         <source src="vid/map.mp4" type="video/mp4">
                         <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
                     </video>
@@ -697,7 +865,7 @@
         <div class="container mx-auto">
             <div class="w-full max-w-[1125px] mx-auto">
                 <div class="xl:flex">
-                    <div class="mt-[-304px] xl:mt-[-200px] z-10 xl:min-w-[590px]" data-aos="fade-right" data-aos-delay="10" data-aos-duration="1000" id="tt">
+                    <div class="mt-[-304px] xl:mt-[-200px] z-10 xl:min-w-[590px]" data-aos="fade-right" data-aos-delay="10" data-aos-duration="1000" id="tt1">
                         <h3 class="text-2xl md:text-2xl md:leading-none font-bold text-black leading-7 block uppercase pb-5
                          md:pb-3 pt-2.5 px-0 md:px-0 text-center md:text-left" 
                         data-aos="fade-left" data-aos-delay="450" data-aos-duration="1000">Benefits of <br class="block md:hidden"> Maruti Suzuki Commercial</h3>
@@ -705,38 +873,11 @@
                         data-aos="fade-left" data-aos-delay="450" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit, sed do eiusmod tempor. incididunt ut labore et</p>
                         <div class="md:absolute z-[1] md:ml-[-10px] xl:min-w-[707px] xl:max-w-[707px] vid-carousel">
                             <div class="owl-carousel" id="c1">
-                                <div class="item relative">
-                                    <img src="images/cr-1.webp" alt="" width="759" height="467" title="" loading="lazy">
-                                    <i class="icon-play absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 cursor-pointer group ease-in duration-300">
-                                        <span class="icon-play-circle relative after:sprite after:w-[17px] after:h-[22px] 
-                                        after:play-icon after:absolute after:top-1/2 after:left-1/2 after:-translate-x-2/4 
-                                        after:-translate-y-2/4 ease-in duration-300"></span>
-                                    </i>
-                                </div>
-                                <div class="item relative">
-                                    <img src="images/cr-1.webp" alt="" width="759" height="467" title="" loading="lazy">
-                                    <i class="icon-play absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-                                        <span class="icon-play-circle relative after:sprite after:w-[17px] after:h-[22px] after:play-icon after:absolute after:top-1/2 after:left-1/2 after:-translate-x-2/4 after:-translate-y-2/4"></span>
-                                    </i>
-                                </div>
-                                <div class="item relative">
-                                    <img src="images/cr-1.webp" alt="" width="759" height="467" title="" loading="lazy">
-                                    <i class="icon-play absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-                                        <span class="icon-play-circle relative after:sprite after:w-[17px] after:h-[22px] after:play-icon after:absolute after:top-1/2 after:left-1/2 after:-translate-x-2/4 after:-translate-y-2/4"></span>
-                                    </i>
-                                </div>
-                                <div class="item relative">
-                                    <img src="images/cr-1.webp" alt="" width="759" height="467" title="" loading="lazy">
-                                    <i class="icon-play absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-                                        <span class="icon-play-circle relative after:sprite after:w-[17px] after:h-[22px] after:play-icon after:absolute after:top-1/2 after:left-1/2 after:-translate-x-2/4 after:-translate-y-2/4"></span>
-                                    </i>
-                                </div>
-                                <div class="item relative">
-                                    <img src="images/cr-1.webp" alt="" width="759" height="467" title="" loading="lazy">
-                                    <i class="icon-play absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-                                        <span class="icon-play-circle relative after:sprite after:w-[17px] after:h-[22px] after:play-icon after:absolute after:top-1/2 after:left-1/2 after:-translate-x-2/4 after:-translate-y-2/4"></span>
-                                    </i>
-                                </div>
+                                <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=NP03O1Qbf-Q&list=PLOr1jK9271AlmWhU2V02WmbtxJMavm3bA&index=6"></a></div> 
+                                <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=ii0fQiMZo6s&list=PLOr1jK9271AlmWhU2V02WmbtxJMavm3bA&index=5"></a></div>
+                                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=AkN4cZlBOTU&list=PLOr1jK9271AlmWhU2V02WmbtxJMavm3bA&index=1"></a></div> 
+                                <div class="item-video" data-merge="4"><a class="owl-video" href="https://www.youtube.com/watch?v=ZMTy1B9Hz9o&list=PLOr1jK9271AlmWhU2V02WmbtxJMavm3bA&index=3"></a></div>
+                                <div class="item-video" data-merge="5"><a class="owl-video" href="https://www.youtube.com/watch?v=_4q4cPXCWxk"></a></div>
                             </div>
                             <div class="owl-dots1 flex space-x-1.5 mt-5 justify-center max-sm:mb-3" id="c1-custom-dots">
                                 <button role="button" class="owl-dotclick owl_dot1 w-3 h-3 xl:w-4 xl:h-4 border border-white rounded-full block active_new"><span></span></button>
@@ -806,7 +947,7 @@
                     >
                         <div class="relative block mb-2.5 md:mb-7 mx-auto max-sm:w-[60px] max-sm:h-[60px] xl:w-[88px] xl:h-[88px]">
                             <img src="images/Rakesh-thakur-2.webp" alt="" width="88" height="88" class="w-auto max-sm:w-[60px] max-sm:h-[60px]" loading="lazy">
-                            <div class="w-8 h-8 bg-white rounded-full absolute -bottom-[11px] left-0 flex items-center justify-center">
+                            <div class="w-8 h-8 bg-white rounded-full absolute -bottom-[11px] left-0 flex items-center justify-center vid-icon-xs">
                                 <img src="images/supercarry/video-icon.webp" alt="" width="22" height="13">
                             </div>
                         </div>
@@ -1044,7 +1185,7 @@
             <div class="row-span-2">
                 <div class="relative xl:w-[400px] xl:h-[611px] 2xl:w-[547px] 2xl:h-[611px] group cursor-pointer" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
                     <img src="images/cci-img-xs-1.webp" alt="" title="" width="355" height="198" class="block md:hidden drop-shadow-[0_0_4px_rgba(0,0,0,0.1)]" loading="lazy">
-                    <video width="100%" height="602" class="vid-radius hidden md:block" autoplay loop muted>
+                    <video class="vid-radius hidden md:block" autoplay loop muted>
                         <source src="vid/vid_2.mp4" type="video/mp4">
                         <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
                     </video>
@@ -1057,18 +1198,18 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
-                          </ul>
+                        </ul>
                     </div>
 
                     <div class="opacity-0 ease-in duration-300 group-hover:opacity-100 bg-primary absolute top-0 left-0 bottom-0 right-0 
@@ -1094,16 +1235,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1130,16 +1271,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1166,16 +1307,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1202,16 +1343,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1238,16 +1379,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1274,16 +1415,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1310,16 +1451,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1346,16 +1487,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1382,16 +1523,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1418,16 +1559,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1454,16 +1595,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1490,16 +1631,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1526,16 +1667,16 @@
                         <a href="#" class="sprite w-[21px] h-5 block icon-share"></a>
                         <ul class="submenu">
                             <li><a href="#" class="whatsapp">
-                                <img src="images/share-fb.webp" alt="">
+                                <img src="images/share-fb.webp" alt="" width="35" height="35">
                             </a></li>
                             <li><a href="#" class="linkedin">
-                                <img src="images/share-twitter.webp" alt="">
+                                <img src="images/share-twitter.webp" alt="" width="36" height="35">
                             </a></li>
                             <li><a href="#" class="twitter">
-                                <img src="images/share-utube.webp" alt="">
+                                <img src="images/share-utube.webp" alt="" width="35" height="36">
                             </a></li>
                             <li><a href="#" class="facebook">
-                                <img src="images/share-insta.webp" alt="">
+                                <img src="images/share-insta.webp" alt="" width="34" height="34">
                             </a></li>
                           </ul>
                     </div>
@@ -1554,12 +1695,12 @@
             </div>
 
         </div>
-        <a href="http://" class="text-xs md:text-base bg-primary text-white py-2.5 px-4 w-full max-w-[125px] md:max-w-[210px] mt-6 md:mt-10 block mx-auto rounded-md text-center border font-medium 
+        <a href="javascript:void(0)" class="text-xs md:text-base bg-primary text-white py-2.5 px-4 w-full max-w-[125px] md:max-w-[210px] mt-6 md:mt-10 block mx-auto rounded-md text-center border font-medium 
         ease-in duration-150 hover:bg-transparent hover:border-primary hover:text-primary">Explore More</a>
     </section>
     <section class="sec-07 max-sm:mt-24 xl:pt-[70px] px-5 md:px-0 relative z-10">
         <div class="container mx-auto xl:max-w-[1209px]">
-            <form action="" class="bg-transparent border rouded-lg md-pb-14 rounded-lg xl:pb-[50px] xl:pt-7 form-sec">
+            <form class="bg-transparent border rouded-lg md-pb-14 rounded-lg xl:pb-[50px] xl:pt-7 form-sec">
                 <div class="w-full max-2xl:max-w-[900px] 2xl:max-w-[860px] block mx-auto px-3.5 pt-12 md:px-0 md:pt-0 relative">
                     <h2 class="text-22 md:text-3xl font-bold text-center text-black uppercase absolute -top-4 xl:-top-11 left-1/2 -translate-x-1/2 bg-white px-3 max-sm:whitespace-nowrap">Enquire now</h2>
                     <p class="text-lg font-medium text-center text-black pb-12 hidden md:block">Lorem ipsum dolor sit amet consectetur adipiscing</p>
@@ -1744,6 +1885,32 @@
         </div>
     </div>
 
+
+    <!-- modal start -->
+    <div class="modal-video">
+        <div class="modal-video-body">
+            <a href="javascript:void(0)" class="modal-video-close"></a>
+            <div class="modal-video-content">
+                <img src="images/video-modal-img.webp" alt="" width="986" height="557">
+            </div>
+            <div class="modal-video-bottom">
+                <div class="mvb-left">
+                    <img src="images/Rakesh-thakur-4.webp" alt="" width="88" height="88">
+                </div>
+                <div class="mvb-right">
+                    <div class="mvb-right-title">
+                        Navi Bhaat
+                    </div>
+                    <p class="mvb-right-title-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim venia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop"></div>
+    <!-- modal end -->
+
     <footer class="bg-[#0c0c0c] text-white">
         <div class="xl:flex">
            <div class="grow">
@@ -1789,7 +1956,7 @@
                     </div>
                     <div class="ml-6 md:ml-10 leading-none">
                         <span class="max-sm:font-normal max-sm:pb-1 max-sm:block xl:font-montserrat text-sm leading-5 xl:text-xs xl:leading-none">24X7 Toll Free Number</span>
-                        <a href="tel:1800 102 1800" class="xl:font-montserrat text-[27px] xl:text-[24px] leading-5 xl:leading-none font-bold block hover:text-white/[0.6]">1800 102 1800</a>
+                        <a href="tel:18001021800" class="xl:font-montserrat text-[27px] xl:text-[24px] leading-5 xl:leading-none font-bold block hover:text-white/[0.6]">1800 102 1800</a>
                     </div>
                 </div>
             </div>
@@ -1849,7 +2016,7 @@
                     </div>
                     <div class="ml-10">
                         <span class="font-montserrat text-base leading-none">24X7 Toll Free Number</span>
-                        <a href="tel:1800 102 1800" class="font-montserrat text-3xl leading-none font-bold block hover:text-white/[0.6]">1800 102 1800</a>
+                        <a href="tel:18001021800" class="font-montserrat text-3xl leading-none font-bold block hover:text-white/[0.6]">1800 102 1800</a>
                     </div>
                 </div>
             </div>
@@ -1897,11 +2064,11 @@
             <span class="block leading-none mt-auto">Call</span>
         </a>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="scripts/threesixty.js"></script>
-    <script src="scripts/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer" async defer ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js" integrity="sha512-h5Vv+n+z0eRnlJoUlWMZ4PLQv4JfaCVtgU9TtRjNYuNltS5QCqi4D4eZn4UkzZZuG2p4VBz3YIlsB7A2NVrbww==" crossorigin="anonymous" referrerpolicy="no-referrer" async defer ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mladenilic/threesixty.js/dist/threesixty.js" async defer></script>
+    <script src="scripts/common.js" async defer></script>
 </body>
 </html>

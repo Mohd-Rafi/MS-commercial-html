@@ -1,17 +1,6 @@
-
-    AOS.init();
-    let threesixty = new ThreeSixty(document.getElementById('threesixty'), {
-    image:'images/ext-360-img.webp',
-    width: 741,
-    height: 350,
-    count: 36,
-    perRow: 5,
-    speed: 100,
-    inverted: true,
-    prev: document.getElementById('prev'),
-    next: document.getElementById('next')
-    });
-    let threesixty2 = new ThreeSixty(document.getElementById('threesixty-2'), {
+    $(function(){
+        AOS.init();
+        let threesixty = new ThreeSixty(document.getElementById('threesixty'), {
         image:'images/ext-360-img.webp',
         width: 741,
         height: 350,
@@ -21,118 +10,98 @@
         inverted: true,
         prev: document.getElementById('prev'),
         next: document.getElementById('next')
-    });
-    threesixty.stop();
-
-    
-
-
-$(document).ready(function(){
-
-    let wheelCarousel = $('#wheel-carousel');
-    wheelCarousel.owlCarousel({
-        loop:false,
-        nav:false,
-        margin:20,
-        responsive:{
-            0:{
-                items:2
-            },
-            600:{
-                items:3
-            },            
-            960:{
-                items:5
-            },
-            1200:{
-                items:6
-            }
-        }
-    });
-
-
-    let carousel1 = '.js-carousel-1';
-    let carousel2 = '.js-carousel-2';
-    $(carousel1).owlCarousel({
-        items: 1,
-        nav:false,
-        dots:true,
-        autoplay: true,
-        smartSpeed: 500,
-        loop:true,
-        autoplayTimeout: 9500,
-        responsive:{
-            0:{
-                items:1,
-            },
-            1200:{
-                items:1
-            }
-        }
-
-    });
-    $(carousel2).owlCarousel({
-        items: 2,
-        margin: 10,
-        nav:true,
-    });
-
-    let owl;
-   owl = $('#c1').owlCarousel({
-            loop:true,
-            margin:0,
-            nav:true,
-            dotsContainer: '#carousel-custom-dots',
+        });
+        let threesixty2 = new ThreeSixty(document.getElementById('threesixty-2'), {
+            image:'images/ext-360-img.webp',
+            width: 741,
+            height: 350,
+            count: 36,
+            perRow: 5,
+            speed: 100,
+            inverted: true,
+            prev: document.getElementById('prev'),
+            next: document.getElementById('next')
+        });
+        threesixty.stop();
+        threesixty2.stop();
+        let carousel1 = $('.js-carousel-1');
+        let carousel2 = $('.js-carousel-2');
+        $(carousel1).owlCarousel({
+            items: 1,
+            nav:false,
             dots:true,
+            autoplay: true,
+            smartSpeed: 500,
+            loop:true,
+            autoplayTimeout: 9500,
             responsive:{
                 0:{
                     items:1,
-                    nav:false,
                 },
-                600:{
+                1200:{
                     items:1
-                },
-                1000:{
-                    items:1,
                 }
             }
+    
         });
-
-    $('.owl-dot').click(function () {
-    owl.trigger('to.owl.carousel', [$(this).index(), 300]);
-    });
-
-    $('.owl_dot').click(function (event) {
+        $(carousel2).owlCarousel({
+            items: 2,
+            margin: 10,
+            nav:true,
+        });
+    
+        let owl;
+        owl = $('#c1').owlCarousel({
+                loop:true,
+                margin:0,
+                nav:true,
+                dotsContainer: '#carousel-custom-dots',
+                dots:true,
+                video: true,
+                lazyLoad: false,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:false,
+                    },
+                    600:{
+                        items:1
+                    },
+                    1000:{
+                        items:1,
+                    }
+                }
+            });
+    
+        $('.owl-dot').click(function () {
         owl.trigger('to.owl.carousel', [$(this).index(), 300]);
-        remoActiveFromDots();
-    });
+        });
     
-     owl.on('changed.owl.carousel', function(event) {
-         
-         remoActiveFromDots();
-        let ein = (event.page.index)+1
-        $('.owl_dot'+ein).addClass('active_new');
-     })
-   
-    
-    
-    let nodeList = document.getElementsByClassName('owl-dotclick');
-    for(let i=1;i<=nodeList.length;i++) {
-         $('.owl_dot'+i).click(function () {
-            owl.trigger('to.owl.carousel', [$(this).index(), 300]); 
+        $('.owl_dot').click(function (event) {
+            owl.trigger('to.owl.carousel', [$(this).index(), 300]);
+            remoActiveFromDots();
+        });
+        
+        owl.on('changed.owl.carousel', function(event) {
+             remoActiveFromDots();
+            let ein = (event.page.index)+1
+            $('.owl_dot'+ein).addClass('active_new');
          })
-    }
-
-    
-    
-    function remoActiveFromDots(){
-        for(let a=1;a<=nodeList.length;a++) {
-            $('.owl_dot'+a).removeClass('active_new')
+       
+        
+        
+        let nodeList = document.getElementsByClassName('owl-dotclick');
+        for(let i=1;i<=nodeList.length;i++) {
+             $('.owl_dot'+i).click(function () {
+                owl.trigger('to.owl.carousel', [$(this).index(), 300]); 
+             })
         }
-    }
-
-
-    $('#c2').owlCarousel({
+        function remoActiveFromDots(){
+            for(let a=1;a<=nodeList.length;a++) {
+                $('.owl_dot'+a).removeClass('active_new')
+            }
+        }
+        $('#c2').owlCarousel({
             loop:true,
             margin:10,
             nav:true,
@@ -159,6 +128,7 @@ $(document).ready(function(){
             nav:true,
             dots:false,
             stagePadding: 300,
+            responsiveClass:true,
             responsive:{
                 0:{
                     items:1
@@ -192,69 +162,66 @@ $(document).ready(function(){
                 }
             }
         });
-
-let paused = false;
-let isRun = false;
-let isAnimate = false;
-$(window).scroll(function() {
-let windowpos = $(window).scrollTop();
-
-if( windowpos >= 1500 ) {
-    let a = 180;
-    let b = 320;
-    let c = 200;
-    let d = 370;
-    if(isAnimate == false){
-        $({counter: 160}).animate({counter: a}, {
-            duration: 1000,
-            easing:'linear',
-            step: function() {    
-                $('.total').text(Math.ceil(this.counter))
-            },
-            complete: function() {
-                isAnimate = true
-            }
-        });
-        $({counter: 300}).animate({counter: b}, {
-            duration: 1000,
-            easing:'linear',
-            step: function() {    
-                $('.totalb').text(Math.ceil(this.counter))
-            },
-            complete: function() {
-                isAnimate = true
-            }
-        });
-        $({counter: 180}).animate({counter: c}, {
-            duration: 1000,
-            easing:'linear',
-            step: function() {    
-                $('.totalc').text(Math.ceil(this.counter))
-            },
-            complete: function() {
-                isAnimate = true
-            }
-        });
-        $({counter: 350}).animate({counter: d}, {
-            duration: 1000,
-            easing:'linear',
-            step: function() {    
-                $('.totald').text(Math.ceil(this.counter))
-            },
-            complete: function() {
-                isAnimate = true
-            }
-        });
-    }
-}else{
-   
-}
        
+        let isRun = false;
+        let isAnimate = false;
+        $(window).scroll(function() {
+        let windowpos = $(window).scrollTop();
+
+        if( windowpos >= 1500 ) {
+            let a = 180;
+            let b = 320;
+            let c = 200;
+            let d = 370;
+            if(isAnimate == 0){
+                $({counter: 160}).animate({counter: a}, {
+                    duration: 1000,
+                    easing:'linear',
+                    step: function() {    
+                        $('.total').text(Math.ceil(this.counter))
+                    },
+                    complete: function() {
+                        isAnimate = true
+                    }
+                });
+                $({counter: 300}).animate({counter: b}, {
+                    duration: 1000,
+                    easing:'linear',
+                    step: function() {    
+                        $('.totalb').text(Math.ceil(this.counter))
+                    },
+                    complete: function() {
+                        isAnimate = true
+                    }
+                });
+                $({counter: 180}).animate({counter: c}, {
+                    duration: 1000,
+                    easing:'linear',
+                    step: function() {    
+                        $('.totalc').text(Math.ceil(this.counter))
+                    },
+                    complete: function() {
+                        isAnimate = true
+                    }
+                });
+                $({counter: 350}).animate({counter: d}, {
+                    duration: 1000,
+                    easing:'linear',
+                    step: function() {    
+                        $('.totald').text(Math.ceil(this.counter))
+                    },
+                    complete: function() {
+                        isAnimate = true
+                    }
+                });
+            }
+        }
+        
         if(windowpos >= 380 &&  windowpos >= 400){
             let e = 593000;
             let f = 1196;
 
-            if(isRun == false){
+            if(isRun == 0){
                 $({counter: 592900}).animate({counter: e}, {
                     duration: 500,
                     easing:'linear',
@@ -277,45 +244,33 @@ if( windowpos >= 1500 ) {
                 });
             }
         } 
-
-});
-
-        let isOpen = false
-        $('.btn-360, .btn-360-xs-mob').click( function(e){
-            e.preventDefault();
-            if(!isOpen){
-                $(this).parent().siblings('.carousel').addClass('hidden');
-                $(this).parent().siblings('#threesixty').removeClass('hidden');
-                $(this).parent().siblings('#threesixty-2').removeClass('hidden');
-                threesixty.play(false, 1);
-                $(this).children('.view-icon').hide();
-                $(this).children('.close-icon').show();
-                isOpen = true
-            }else{
-                $(this).parent().siblings('.carousel').removeClass('hidden');
-                $(this).parent().siblings('#threesixty').addClass('hidden');
-                $(this).parent().siblings('#threesixty-2').addClass('hidden');
-                $(this).children('.close-icon').hide();
-                $(this).children('.view-icon').show();
-                isOpen = false
-            }
-        });
-
+    })
+    $('.btn-360, .btn-360-xs-mob').click( function(e){
+        e.preventDefault();
+            $(this).parents('.carousel').addClass('hidden');
+            $(this).parents('.carousel').siblings('.threesixty-block').removeClass('hidden');
+            threesixty.play(false, 1);
+            $(this).children('.view-icon').hide();
+            $(this).children('.close-icon').show();
+    });
+    $('.close-icon').click(function(e){
+        e.preventDefault();
+        $(this).parent('.threesixty-block').addClass('hidden');
+        $(this).parent('.threesixty-block').siblings('.carousel').removeClass('hidden');
+        $(this).parent('.threesixty-block').siblings('.carousel').find('.view-icon').show();
+    });
 
     $('.tab-pane').hide();
     $('.tab-pane:first').show();
     $('.tabs>a').click(function(e){
         e.preventDefault();
-        var _href = $(this).attr("href");
+        let _href = $(this).attr("href");
         $('.tabs>a').removeClass('tab-active');
         $(this).addClass('tab-active');
         $('.tab-pane').hide();
         $(_href).fadeIn();
+        
     });
-
-
-
-});
     let scrollToTopBtn = document.querySelector("#back-to-top");
     let rootElement = document.documentElement;
 
@@ -339,11 +294,8 @@ if( windowpos >= 1500 ) {
     scrollToTopBtn.addEventListener("click", scrollToTop);
     document.addEventListener("scroll", handleScroll);
 
-$(document).ready(function(){
-
-
     $('.send-otp').click(function(){
-        var Inputval = $(this).siblings('input').val();
+        let Inputval = $(this).siblings('input').val();
         if(Inputval.length == 10){
             $(this).parents('.mobile-otp').addClass('hidden');
             $(this).parents('.mobile-otp').siblings('.registered-otp').removeClass('hidden');
@@ -358,27 +310,24 @@ $(document).ready(function(){
         $(this).parents('.registered-otp').siblings('.mobile-otp').removeClass('hidden');
     });
 
-    $(function(){
-        $(window).scroll(function(){
-                let scroll = $(window).scrollTop();
-                let divPos =  $('.sec-08car').offset().top;
-                let scrolled = scroll - divPos;
-                //console.log(scrolled + 'test');
-            if ($(window).scrollTop() > 0){
-                $(".img-car-moving").css("left",  -scrolled);
-                $('.back-wheel, .front-wheel').css({ 
-                        transform: 'rotate(' + -scrolled + 'deg)' 
-                });   
-            }
-        });
-        $(window).scroll(function(){
-            if ($(window).scrollTop() >= 1) {
-                $('header').addClass('header-fixed');
-            }
-            else {
-                $('header').removeClass('header-fixed');
-            }
-        });
+    $(window).scroll(function(){
+            let scroll = $(window).scrollTop();
+            let divPos =  $('.sec-08car').offset().top;
+            let scrolled = scroll - divPos;
+        if ($(window).scrollTop() > 0){
+            $(".img-car-moving").css("left",  -scrolled);
+            $('.back-wheel, .front-wheel').css({ 
+                    transform: 'rotate(' + -scrolled + 'deg)' 
+            });   
+        }
+    });
+    $(window).scroll(function(){
+        if ($(window).scrollTop() >= 1) {
+            $('header').addClass('header-fixed');
+        }
+        else {
+            $('header').removeClass('header-fixed');
+        }
     });
     $('.bar-click').click(function(e){
         e.preventDefault();
@@ -509,7 +458,6 @@ $(document).ready(function(){
     $('.btn-search-xs').on('click', function(){
         if($(this).parents('.search-xs').hasClass('width-expand')){
             $(this).removeClass('width-expand');
-        }else{
         }
         $(this).addClass('hide');
     });
@@ -518,7 +466,7 @@ $(document).ready(function(){
     $('.search-block').css('width', navWidth);
 
 
-    let pointerID;
+    
     let tabId;
     function selectcar(target) {
         for (let i = 1; i < 8; i++) {
@@ -529,7 +477,6 @@ $(document).ready(function(){
     $('.color-name li a').click(function () {
         $(this).parent().siblings().removeClass('color-choose-active');
         $(this).parent().addClass('color-choose-active');
-        pointerID = $('.car-list li').attr('id');
         tabId = $(this).parent().attr('id');
         selectcar(tabId);
     });
@@ -546,7 +493,7 @@ $(document).ready(function(){
         });
     });
 
-    $('.next-carousel').click(function(e){
+    $('.next-carousel').click(function(event){
         event.preventDefault();
         $('#modal-carousel').trigger('next.owl.carousel');
     });
@@ -555,6 +502,14 @@ $(document).ready(function(){
         $('#modal-carousel').trigger('prev.owl.carousel', [300]);
     });
 
+    $('.vid-icon-xs').click(function(){
+        $('.modal-video').fadeIn();
+        $('.modal-backdrop').fadeIn();
+    });
+    $('.modal-video-close').click(function(){
+        $(this).parents('.modal-video').fadeOut();
+        $(this).parents('.modal-video').siblings('.modal-backdrop').fadeOut();
+    });
 
     $('.acc-btn').click(function(){
         $(this).removeClass('mb-1');
@@ -572,9 +527,7 @@ $(document).ready(function(){
     });
 
 
-});
 
-jQuery(function(){
     $('#carousel_new').owlCarousel({
         loop:true,
         margin:0,
@@ -593,45 +546,44 @@ jQuery(function(){
             }
         }
     });
-});
 
-let $swiperSelector = $('.swiper-container');
+    let $swiperSelector = $('.swiper-container');
+    $swiperSelector.each(function(index) {
+        let $this = $(this);
+        $this.addClass('swiper-slider-' + index);
+        
+        let dragSize = $this.data('drag-size') ? $this.data('drag-size') :86;
+        let freeMode = $this.data('free-mode') ? $this.data('free-mode') : false;
+        let loop = $this.data('loop') ? $this.data('loop') : false;
+        let slidesDesktop = $this.data('slides-desktop') ? $this.data('slides-desktop') : 5;
+        let slidesTablet = $this.data('slides-tablet') ? $this.data('slides-tablet') : 5;
+        let slidesMobile = $this.data('slides-mobile') ? $this.data('slides-mobile') : 3;
+        let spaceBetween = $this.data('space-between') ? $this.data('space-between'): 30;
 
-$swiperSelector.each(function(index) {
-    let $this = $(this);
-    $this.addClass('swiper-slider-' + index);
-    
-    let dragSize = $this.data('drag-size') ? $this.data('drag-size') :86;
-    let freeMode = $this.data('free-mode') ? $this.data('free-mode') : false;
-    let loop = $this.data('loop') ? $this.data('loop') : false;
-    let slidesDesktop = $this.data('slides-desktop') ? $this.data('slides-desktop') : 5;
-    let slidesTablet = $this.data('slides-tablet') ? $this.data('slides-tablet') : 5;
-    let slidesMobile = $this.data('slides-mobile') ? $this.data('slides-mobile') : 3;
-    let spaceBetween = $this.data('space-between') ? $this.data('space-between'): 30;
-
-    let swiper = new Swiper('.swiper-slider-' + index, {
-      direction: 'horizontal',
-      loop: loop,
-      freeMode: freeMode,
-      spaceBetween: spaceBetween,
-      breakpoints: {
-        1920: {
-          slidesPerView: slidesDesktop
+        new Swiper('.swiper-slider-' + index, {
+        direction: 'horizontal',
+        loop: loop,
+        freeMode: freeMode,
+        spaceBetween: spaceBetween,
+        breakpoints: {
+            1920: {
+            slidesPerView: slidesDesktop
+            },
+            992: {
+            slidesPerView: slidesTablet
+            },
+            320: {
+            slidesPerView: slidesMobile,
+            spaceBetween: 10,
+            }
         },
-        992: {
-          slidesPerView: slidesTablet
-        },
-        320: {
-           slidesPerView: slidesMobile,
-           spaceBetween: 10,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+            dragSize: dragSize
         }
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-        dragSize: dragSize
-      }
-   });
-});
+    });
+    });
 
-$(document).find('.swiper-scrollbar-drag').append('<p class="text-sm font-medium leading-none text-white text-center">Drag<p>');
+    $(document).find('.swiper-scrollbar-drag').append('<p class="text-sm font-medium leading-none text-white text-center">Drag<p>');
+ });
