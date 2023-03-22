@@ -1075,7 +1075,15 @@
         grid-template-columns:fit-content(70px) fit-content(70px);
         column-gap:10px;
     }
-    
+    .cr-thumb{
+        @apply max-sm:px-5 max-sm:max-w-full max-sm:left-0 max-sm:top-auto max-sm:bottom-[40px] max-sm:absolute xl:max-w-[395px]  bottom-5 xl:max-w-[395px] xl:mt-4 
+    }
+    .cr-thumb-content{
+        @apply absolute left-4 bottom-3 max-sm:left-2 max-sm:bottom-1
+    }
+    .cr-thumb-content-text{
+        @apply text-sm font-medium text-white uppercase leading-none max-sm:text-13
+    }
     .frame {
         /* @apply overflow-hidden; */
     }
@@ -1557,9 +1565,6 @@
             width:34px;
             height:33px;
             background-position:center;
-        }
-        .cr-thumb{
-            bottom:40px;
         }
         .social .tw svg,
         .social .ins svg,

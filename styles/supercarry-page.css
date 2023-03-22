@@ -381,6 +381,18 @@ margin-top: 0;
   opacity: 1;
   transition: 0.6s;
 }
+.sec-design{
+  background-image:url(../images/tour-m/sec-design-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:820px;
+}
+.design-wrap{
+  padding-top:100px;
+}
+.tabs-item.tabs-item-new{
+  min-width:145px;
+}
 
 
 
@@ -561,5 +573,11 @@ margin-top: 0;
   }
   .sec-04 .owl-stage-outer{
     overflow:hidden;
+  }
+  .sec-design{
+    background-image:url(../images/tour-m/sec-design-bg-mobile.webp);
+    height:899px;
+    background-size:100%;
+    margin-top:100px;
   }
 }
